@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Athiyah Zakir · Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+  <!-- ── Navigation ──────────────────────────────────── -->
+  <header>
+    <nav class="site-nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">Explore   </a>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- ── On this page bar ─────────────────────────── -->
+    <div class="on-this-page">
+      <div class="otp-inner">
+        <span class="otp-label">On this page</span>
+        <div class="otp-divider"></div>
+        <div class="otp-links">
+          <a href="#section-stack"     class="otp-link">Tech Stack</a>
+          <a href="#section-projects"  class="otp-link">Projects</a>
+          <a href="#section-journey"   class="otp-link">Journey</a>
+          <a href="#section-interests" class="otp-link">Interests</a>
+          <a href="#section-contact"   class="otp-link">Contact</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ══════════════════════════════════════════════════
+         HERO
+    ══════════════════════════════════════════════════ -->
+    <section class="hero-section">
+      <div class="hero-text">
+        <span class="hero-eyebrow">CS Student &amp; Creative</span>
+        <h1 class="hero-heading">
+          Where code<br>meets <em>creativity*</em>
+        </h1>
+        <p class="hero-body">
+          Hi, I'm <strong>Athiyah Zakir</strong> — a Computer Science student
+          with a heart for AI, design, gaming, and the art of making
+          things that are both thoughtful and beautiful.
+        </p>
+        <div class="hero-cta-row">
+          <a href="blog.html" class="hero-cta">See my work <span class="arrow">→</span></a>
+          <a href="contact.html" class="hero-cta-ghost">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-dots"></div>
+        <div class="hero-image-frame">
+          <img src="images/hero-image.jpg" alt="Athiyah Zakir — developer &amp; creative">
+        </div>
+        <div class="hero-float-tag">
+          <span class="tag-label">Currently exploring</span>
+          <span class="tag-value">AI &amp; Web Dev ✦</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         TECH STACK
+    ══════════════════════════════════════════════════ -->
+    <section class="stack-section" id="section-stack">
+      <div class="section-header">
+        <h2 class="section-title">Tech stack</h2>
+        <span class="section-line"></span>
+        <span class="section-count">Skills &amp; tools</span>
+      </div>
+
+      <div class="skill-cards-grid">
+
+        <div class="skill-card" style="--card-bg:#fdf0f3;--card-border:#f5d6de;">
+          <div class="skill-card-icon" style="color:#c9607a;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.83l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.23l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05L0 11.97l.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.26-.02.18-.01h5.83l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.37.1-.35.07-.32.04-.28.02-.21V6.07l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.19-.01h.02l.06.01zM12 15.27a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88zm-.06-9.3a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>
+          </div>
+          <div class="skill-card-name">Python</div>
+          <div class="skill-card-level">Comfortable</div>
+          <div class="skill-card-bar"><div class="skill-card-fill" style="width:82%;background:linear-gradient(90deg,#f5a8c0,#c9607a);"></div></div>
+        </div>
+
+        <div class="skill-card" style="--card-bg:#ede7f6;--card-border:#d4c9f0;">
+          <div class="skill-card-icon" style="color:#8b6bbf;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/></svg>
+          </div>
+          <div class="skill-card-name">HTML &amp; CSS</div>
+          <div class="skill-card-level">Comfortable</div>
+          <div class="skill-card-bar"><div class="skill-card-fill" style="width:78%;background:linear-gradient(90deg,#c4b5fd,#8b6bbf);"></div></div>
+        </div>
+
+        <div class="skill-card" style="--card-bg:#daf1ec;--card-border:#aadfd1;">
+          <div class="skill-card-icon" style="color:#3d8c78;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/></svg>
+          </div>
+          <div class="skill-card-name">JavaScript</div>
+          <div class="skill-card-level">Learning</div>
+          <div class="skill-card-bar"><div class="skill-card-fill" style="width:55%;background:linear-gradient(90deg,#7bbfaa,#3d8c78);"></div></div>
+        </div>
+
+        <div class="skill-card" style="--card-bg:#fdebd8;--card-border:#f4cca6;">
+          <div class="skill-card-icon" style="color:#c07840;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M8.851 18.56s-.917.534.653.714c1.902.218 2.874.187 4.969-.211 0 0 .552.346 1.321.646-4.699 2.013-10.633-.118-6.943-1.149M8.276 15.933s-1.028.761.542.924c2.032.209 3.636.227 6.413-.308 0 0 .384.389.987.602-5.679 1.661-12.007.13-7.942-1.218M13.116 11.475c1.158 1.333-.304 2.533-.304 2.533s2.939-1.518 1.589-3.418c-1.261-1.772-2.228-2.652 3.007-5.688 0-.001-8.216 2.051-4.292 6.573M19.33 20.504s.679.559-.747.991c-2.712.822-11.288 1.069-13.669.033-.856-.373.749-.890 1.254-.998.527-.114.828-.093.828-.093-.953-.671-6.156 1.317-2.643 1.887 9.58 1.553 17.462-.7 14.977-1.820M9.292 13.21s-4.362 1.036-1.544 1.412c1.189.159 3.561.123 5.77-.062 1.806-.152 3.618-.477 3.618-.477s-.637.272-1.098.587c-4.429 1.165-12.986.623-10.522-.568 2.082-1.006 3.776-.892 3.776-.892M17.116 17.584c4.503-2.34 2.421-4.589.968-4.285-.355.074-.515.138-.515.138s.132-.207.385-.297c2.875-1.011 5.086 2.981-.928 4.562 0-.001.07-.062.09-.118M14.401 0s2.494 2.494-2.365 6.33c-3.896 3.077-.888 4.832-.001 6.836-2.274-2.053-3.943-3.858-2.824-5.539 1.644-2.469 6.197-3.665 5.19-7.627M9.734 23.924c4.322.277 10.959-.153 11.116-2.198 0 0-.302.775-3.572 1.391-3.688.694-8.239.613-10.937.168 0-.001.553.457 3.393.639"/></svg>
+          </div>
+          <div class="skill-card-name">Java</div>
+          <div class="skill-card-level">Learning</div>
+          <div class="skill-card-bar"><div class="skill-card-fill" style="width:50%;background:linear-gradient(90deg,#fbc97a,#c07840);"></div></div>
+        </div>
+
+        <div class="skill-card" style="--card-bg:#fdf0f3;--card-border:#f5d6de;">
+          <div class="skill-card-icon" style="color:#c9607a;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0V0zm7.462 13.843c0 1.998.47 3.12 1.337 3.12.672 0 1.193-.504 1.496-1.428L11.4 16.58c-.563 1.658-1.595 2.587-3.14 2.587-2.26 0-3.602-1.722-3.602-5.185 0-3.505 1.37-5.227 3.644-5.227 1.931 0 2.93 1.19 3.284 3.13l-1.706.487c-.184-1.12-.631-1.85-1.47-1.85-.98 0-1.448.966-1.448 3.32zm9.617 5.072L14.99 9.003h1.9l.88 4.887c.252 1.386.462 2.77.63 4.16h.056c.168-1.386.378-2.774.63-4.16l.882-4.887h1.9l-2.09 9.912h-2.72z"/></svg>
+          </div>
+          <div class="skill-card-name">SQL</div>
+          <div class="skill-card-level">Beginner</div>
+          <div class="skill-card-bar"><div class="skill-card-fill" style="width:38%;background:linear-gradient(90deg,#f5a8c0,#c9607a);"></div></div>
+        </div>
+
+        <div class="skill-card" style="--card-bg:#ede7f6;--card-border:#d4c9f0;">
+          <div class="skill-card-icon" style="color:#8b6bbf;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1.27a11 11 0 00-3.48 21.46c.55.09.73-.28.73-.55v-1.84c-3.03.64-3.67-1.46-3.67-1.46-.55-1.29-1.28-1.65-1.28-1.65-.92-.65.1-.65.1-.65 1.1 0 1.73 1.1 1.73 1.1.92 1.65 2.57 1.2 3.21.92a2 2 0 01.64-1.47c-2.47-.27-5.04-1.19-5.04-5.5 0-1.1.46-2.1 1.2-2.84a3.76 3.76 0 010-2.93s.91-.28 3.11 1.1c1.8-.49 3.7-.49 5.5 0 2.1-1.38 3.02-1.1 3.02-1.1a3.76 3.76 0 010 2.93c.83.74 1.2 1.74 1.2 2.84 0 4.31-2.57 5.23-5.04 5.5.45.37.82.92.82 2.02v3.03c0 .27.1.64.73.55A11 11 0 0012 1.27"/></svg>
+          </div>
+          <div class="skill-card-name">Git &amp; GitHub</div>
+          <div class="skill-card-level">Comfortable</div>
+          <div class="skill-card-bar"><div class="skill-card-fill" style="width:70%;background:linear-gradient(90deg,#c4b5fd,#8b6bbf);"></div></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         PROJECTS GLIMPSE
+    ══════════════════════════════════════════════════ -->
+    <section class="projects-glimpse-section" id="section-projects">
+      <div class="section-header">
+        <h2 class="section-title">Recent projects</h2>
+        <span class="section-line"></span>
+        <a href="blog.html" class="section-link-btn">View all →</a>
+      </div>
+
+      <div class="glimpse-grid">
+
+        <a href="https://github.com/AthiyahZakir/Traffic-data-Analyzing-System" target="_blank" rel="noopener" class="glimpse-card">
+          <div class="glimpse-img">
+            <img src="images/project1.jpg" alt="Traffic Data System">
+            <div class="glimpse-overlay">
+              <span class="glimpse-arrow">↗</span>
+            </div>
+          </div>
+          <div class="glimpse-body">
+            <div class="glimpse-tags">
+              <span class="gtag rose">Python</span>
+              <span class="gtag lavender">Data Analysis</span>
+            </div>
+            <h3 class="glimpse-title">Traffic Data Analyzing System</h3>
+          </div>
+        </a>
+
+        <a href="https://github.com/AthiyahZakir/Weather-App" target="_blank" rel="noopener" class="glimpse-card">
+          <div class="glimpse-img">
+            <img src="images/project4.jpg" alt="Weather App">
+            <div class="glimpse-overlay">
+              <span class="glimpse-arrow">↗</span>
+            </div>
+          </div>
+          <div class="glimpse-body">
+            <div class="glimpse-tags">
+              <span class="gtag mint">JavaScript</span>
+              <span class="gtag lavender">API</span>
+            </div>
+            <h3 class="glimpse-title">Dynamic Weather Detection App</h3>
+          </div>
+        </a>
+
+        <a href="https://github.com/AthiyahZakir/Classic-Tic-Tac-Toe---Game" target="_blank" rel="noopener" class="glimpse-card">
+          <div class="glimpse-img">
+            <img src="images/project6.jpg" alt="Tic Tac Toe">
+            <div class="glimpse-overlay">
+              <span class="glimpse-arrow">↗</span>
+            </div>
+          </div>
+          <div class="glimpse-body">
+            <div class="glimpse-tags">
+              <span class="gtag rose">HTML &amp; CSS</span>
+              <span class="gtag amber">JS</span>
+            </div>
+            <h3 class="glimpse-title">Tic Tac Toe Classic Game</h3>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         CLUB & VOLUNTEER JOURNEY (with photo slider)
+    ══════════════════════════════════════════════════ -->
+    <section class="journey-section" id="section-journey">
+      <div class="section-header">
+        <h2 class="section-title">Club &amp; volunteer journey</h2>
+        <span class="section-line"></span>
+        <span class="section-count">IEEE &amp; beyond</span>
+      </div>
+
+      <div class="journey-layout">
+
+        <!-- Timeline -->
+        <div class="journey-timeline">
+
+          <div class="tl-item">
+            <div class="tl-dot" style="background:var(--rose);"></div>
+            <div class="tl-body">
+              <div class="tl-meta">
+                <span class="tl-date">2024 – Present</span>
+                <span class="tl-badge badge-rose">IEEE Student Branch</span>
+              </div>
+              <h3 class="tl-role">IEEE Volunteer &amp; Hackathon Participant</h3>
+              <p class="tl-desc">Competed in the IEEE Xtreme 24-Hour Programming Challenge, collaborated on algorithmic solutions, and helped organise student tech events.</p>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-dot" style="background:var(--lavender);"></div>
+            <div class="tl-body">
+              <div class="tl-meta">
+                <span class="tl-date">2023 – 2024</span>
+                <span class="tl-badge badge-lavender">Women in STEM</span>
+              </div>
+              <h3 class="tl-role">Content Lead &amp; Event Organiser</h3>
+              <p class="tl-desc">Created social media content spotlighting women in tech and co-organised a panel event with industry guests attended by 80+ people.</p>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-dot" style="background:var(--mint);"></div>
+            <div class="tl-body">
+              <div class="tl-meta">
+                <span class="tl-date">2023</span>
+                <span class="tl-badge badge-mint">Coding Club</span>
+              </div>
+              <h3 class="tl-role">Member &amp; Project Contributor</h3>
+              <p class="tl-desc">Attended weekly meetups and collaborated on a community-focused app — where I first discovered a love for building things together.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Photo slider -->
+        <div class="journey-slider-wrap">
+          <p class="slider-label">Moments ✦</p>
+          <div class="slider" id="journeySlider">
+            <div class="slide active">
+              <img src="images/journey1.jpeg" alt="IEEE event moment">
+              <p class="slide-caption">IEEE Xtreme Hackathon</p>
+            </div>
+            <div class="slide">
+              <img src="images/journey2.jpeg" alt="Women in STEM panel">
+              <p class="slide-caption">Women in STEM Panel Event</p>
+            </div>
+            <div class="slide">
+              <img src="images/journey3.jpeg" alt="Coding club meetup">
+              <p class="slide-caption">Coding Club Meetup</p>
+            </div>
+            <div class="slide">
+              <img src="images/journey4.jpeg" alt="Volunteer event">
+              <p class="slide-caption">Volunteer Day</p>
+            </div>
+          </div>
+          <div class="slider-controls">
+            <button class="slider-btn" id="sliderPrev" aria-label="Previous">‹</button>
+            <div class="slider-dots" id="sliderDots"></div>
+            <button class="slider-btn" id="sliderNext" aria-label="Next">›</button>
+          </div>
+          <!-- Add more images hint -->
+          <p class="slider-hint">Add your own photos by replacing journey1.jpg – journey4.jpg in your images folder.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         INTERESTS (with photos)
+    ══════════════════════════════════════════════════ -->
+    <section class="interests-section" id="section-interests">
+      <div class="section-header">
+        <h2 class="section-title">What I'm into</h2>
+        <span class="section-line"></span>
+        <span class="section-count">6 interests</span>
+      </div>
+
+      <div class="interests-grid">
+
+        <article class="interest-card featured">
+          <div class="interest-img">
+            <img src="images/tech-ai.jpg" alt="AI & Creativity">
+            <div class="interest-img-overlay"></div>
+          </div>
+          <div class="interest-body">
+            <div class="card-icon rose">✦</div>
+            <h3 class="card-title">AI &amp; Creativity</h3>
+            <p class="card-text">
+              I'm fascinated by how artificial intelligence can amplify human
+              imagination — from generative tools to smart assistants that evolve.
+              To me, AI isn't just code; it's a mirror of human thought.
+            </p>
+          </div>
+        </article>
+
+        <article class="interest-card">
+          <div class="interest-img">
+            <img src="images/gaming_world.jpg" alt="Gaming & Logic">
+            <div class="interest-img-overlay"></div>
+          </div>
+          <div class="interest-body">
+            <div class="card-icon lavender">◈</div>
+            <h3 class="card-title">Gaming &amp; Logic</h3>
+            <p class="card-text">Games teach me to think strategically and tell stories through systems. Every mechanic is a small act of engineering.</p>
+          </div>
+        </article>
+
+        <article class="interest-card">
+          <div class="interest-img">
+            <img src="images/culinary-creativity.jpg" alt="Cooking & Culture">
+            <div class="interest-img-overlay"></div>
+          </div>
+          <div class="interest-body">
+            <div class="card-icon mint">◉</div>
+            <h3 class="card-title">Cooking &amp; Culture</h3>
+            <p class="card-text">My kitchen is a creative lab where traditional and Western cuisines collide into flavorful, personal stories.</p>
+          </div>
+        </article>
+
+        <article class="interest-card">
+          <div class="interest-img">
+            <img src="images/wellness-lifestyle.jpg" alt="Wellness & Sustainability">
+            <div class="interest-img-overlay"></div>
+          </div>
+          <div class="interest-body">
+            <div class="card-icon lavender">☽</div>
+            <h3 class="card-title">Wellness &amp; Sustainability</h3>
+            <p class="card-text">Yoga and mindfulness keep me grounded. Small conscious choices ripple outward — for ourselves and the planet.</p>
+          </div>
+        </article>
+
+        <article class="interest-card">
+          <div class="interest-img">
+            <img src="images/journey3.jpeg" alt="IEEE Volunteering">
+            <div class="interest-img-overlay"></div>
+          </div>
+          <div class="interest-body">
+            <div class="card-icon mint">⬡</div>
+            <h3 class="card-title">IEEE Volunteering</h3>
+            <p class="card-text">Hackathons, student events, and tech communities remind me how powerful learning together can be.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         CTA BANNER
+    ══════════════════════════════════════════════════ -->
+    <section class="cta-banner" id="section-contact">
+      <div class="cta-banner-inner">
+        <div>
+          <h2 class="cta-title">Let's build something <em>together</em></h2>
+          <p class="cta-sub">Open to collaborations, internships, and new opportunities.</p>
+        </div>
+        <a href="contact.html" class="hero-cta">Say hello <span class="arrow">→</span></a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-logo">Athiyah Zakir</span>
+      <span class="footer-tagline">Celebrating curiosity &amp; connection</span>
+      <span class="footer-copy">&copy; 2025 · All rights reserved</span>
+    </div>
+  </footer>
+
+  <!-- ── Slider JS ────────────────────────────────────── -->
+  <script>
+    (function () {
+      const slides = document.querySelectorAll('#journeySlider .slide');
+      const dotsContainer = document.getElementById('sliderDots');
+      let current = 0;
+      let timer;
+
+      // Build dots
+      slides.forEach((_, i) => {
+        const d = document.createElement('button');
+        d.className = 'slider-dot' + (i === 0 ? ' active' : '');
+        d.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+        d.addEventListener('click', () => goTo(i));
+        dotsContainer.appendChild(d);
+      });
+
+      function goTo(n) {
+        slides[current].classList.remove('active');
+        dotsContainer.children[current].classList.remove('active');
+        current = (n + slides.length) % slides.length;
+        slides[current].classList.add('active');
+        dotsContainer.children[current].classList.add('active');
+        resetTimer();
+      }
+
+      function resetTimer() {
+        clearInterval(timer);
+        timer = setInterval(() => goTo(current + 1), 4000);
+      }
+
+      document.getElementById('sliderPrev').addEventListener('click', () => goTo(current - 1));
+      document.getElementById('sliderNext').addEventListener('click', () => goTo(current + 1));
+
+      resetTimer();
+    })();
+  </script>
+
+</body>
+</html>
