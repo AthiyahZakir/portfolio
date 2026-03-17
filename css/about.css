@@ -1,0 +1,526 @@
+/* ============================================================
+   about.css — Styles for about.html ONLY
+   Athiyah Zakir Portfolio · About Page
+   Imports Google Fonts: Cormorant Garamond + Jost
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap');
+
+/* ── Variables ─────────────────────────────────────────── */
+:root {
+  --rose:        #c9607a;
+  --rose-light:  #f5d6de;
+  --rose-pale:   #fdf0f3;
+  --lavender:    #a89bc2;
+  --lav-light:   #ede7f6;
+  --mint:        #7bbfaa;
+  --mint-light:  #daf1ec;
+  --cream:       #fdf8f3;
+  --ink:         #2c1f2e;
+  --muted:       #7a6a7c;
+  --border:      rgba(169, 130, 150, 0.18);
+  --shadow-sm:   0 2px 12px rgba(100, 50, 70, 0.07);
+  --shadow-md:   0 8px 32px rgba(100, 50, 70, 0.11);
+  --r-md:        12px;
+  --r-lg:        20px;
+  --r-xl:        32px;
+}
+
+/* ── Reset ─────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+/* ── Body ──────────────────────────────────────────────── */
+body {
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+  color: var(--ink);
+  background-color: var(--cream);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── NAV ───────────────────────────────────────────────── */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(253, 248, 243, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 2.5rem;
+}
+
+.nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--rose);
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.nav-links a {
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  transition: color 0.2s, background 0.2s;
+}
+
+.nav-links a:hover { color: var(--ink); background: var(--rose-light); }
+.nav-links a.active { color: var(--rose); background: var(--rose-pale); }
+
+/* ── Main ──────────────────────────────────────────────── */
+main {
+  flex: 1;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 2rem 6rem;
+}
+
+/* ── PAGE HERO ─────────────────────────────────────────── */
+.about-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  margin-bottom: 5rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.about-hero-text {}
+
+.page-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--rose);
+  background: var(--rose-pale);
+  border: 1px solid var(--rose-light);
+  padding: 5px 14px;
+  border-radius: 999px;
+  margin-bottom: 1.5rem;
+}
+
+.page-eyebrow::before {
+  content: '';
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--rose);
+}
+
+.about-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.4rem, 4vw, 3.6rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 1.25rem;
+}
+
+.about-heading em { font-style: italic; color: var(--rose); }
+
+.about-intro {
+  font-size: 1.02rem;
+  line-height: 1.8;
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+/* Strength pills */
+.strength-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pill {
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 5px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+}
+
+.pill-rose     { background: var(--rose-pale);  color: var(--rose); border-color: var(--rose-light); }
+.pill-lavender { background: var(--lav-light);  color: #6d5a9c;     border-color: #d4c9f0; }
+.pill-mint     { background: var(--mint-light); color: #3d8c78;     border-color: #aadfd1; }
+
+/* Hero image */
+.about-image-wrap {
+  position: relative;
+}
+
+.about-image-frame {
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  aspect-ratio: 4/5;
+  background: linear-gradient(145deg, var(--lav-light), var(--rose-pale));
+}
+
+.about-image-frame img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.about-image-frame:hover img { transform: scale(1.03); }
+
+.about-dots {
+  position: absolute;
+  bottom: -1rem; right: -1rem;
+  width: 80px; height: 80px;
+  background-image: radial-gradient(var(--lav-light) 1.5px, transparent 1.5px);
+  background-size: 12px 12px;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+/* ── TOC ───────────────────────────────────────────────── */
+.toc-section {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 1.75rem 2rem;
+  margin-bottom: 4rem;
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.toc-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--ink);
+  white-space: nowrap;
+  padding-top: 2px;
+  min-width: 110px;
+}
+
+.toc-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.toc-links a {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 5px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  transition: color 0.2s, background 0.2s, border-color 0.2s;
+}
+
+.toc-links a:hover {
+  color: var(--rose);
+  background: var(--rose-pale);
+  border-color: var(--rose-light);
+}
+
+/* ── SECTION HEADER ────────────────────────────────────── */
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.section-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--rose);
+  opacity: 0.7;
+  min-width: 2rem;
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.section-line {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ── CONTENT SECTIONS ──────────────────────────────────── */
+.content-section {
+  margin-bottom: 5rem;
+  scroll-margin-top: 80px;
+}
+
+.content-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.content-body.full { grid-template-columns: 1fr; }
+
+.content-prose p {
+  font-size: 0.97rem;
+  line-height: 1.85;
+  color: var(--muted);
+  margin-bottom: 1.1rem;
+}
+
+.content-prose p:last-child { margin-bottom: 0; }
+
+/* Strength list for soft skills */
+.strength-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.strength-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.strength-list li::before {
+  content: '';
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--rose);
+  flex-shrink: 0;
+  margin-top: 0.5rem;
+}
+
+.strength-list strong { color: var(--ink); }
+
+/* Image card */
+.img-card {
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #fff;
+}
+
+.img-card img {
+  width: 100%; height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.img-card:hover img { transform: scale(1.04); }
+
+.img-caption {
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-style: italic;
+  padding: 0.75rem 1rem;
+  border-top: 1px solid var(--border);
+}
+
+/* Wellness case studies */
+.wellness-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.wellness-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 1.25rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.wellness-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-sm);
+}
+
+.wellness-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+
+.wellness-card p {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+/* Resources */
+.resource-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.resource-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.resource-list li::before {
+  content: '↗';
+  font-size: 0.8rem;
+  color: var(--rose);
+  flex-shrink: 0;
+}
+
+.resource-list a {
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+  border-bottom: 1px solid transparent;
+}
+
+.resource-list a:hover {
+  color: var(--rose);
+  border-bottom-color: var(--rose-light);
+}
+
+/* Back to top */
+.back-to-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  text-decoration: none;
+  margin-top: 1.5rem;
+  transition: color 0.2s;
+}
+
+.back-to-top:hover { color: var(--rose); }
+
+/* ── FOOTER ────────────────────────────────────────────── */
+.site-footer {
+  background: var(--ink);
+  color: rgba(255,255,255,0.5);
+  padding: 3rem 2.5rem;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  font-style: italic;
+  color: rgba(255,255,255,0.85);
+}
+
+.footer-copy { font-size: 0.8rem; letter-spacing: 0.03em; }
+
+.footer-tagline {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--rose);
+  opacity: 0.8;
+}
+
+/* ── ANIMATIONS ────────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.page-eyebrow  { animation: fadeUp 0.55s ease both 0.1s; }
+.about-heading { animation: fadeUp 0.55s ease both 0.2s; }
+.about-intro   { animation: fadeUp 0.55s ease both 0.3s; }
+.strength-pills { animation: fadeUp 0.55s ease both 0.4s; }
+.about-image-wrap { animation: fadeUp 0.65s ease both 0.15s; }
+
+/* ── RESPONSIVE ────────────────────────────────────────── */
+@media (max-width: 860px) {
+  .about-hero {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-image-wrap { order: -1; }
+
+  .content-body {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .wellness-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  .site-nav { padding: 0 1.25rem; }
+  main { padding: 2.5rem 1.25rem 4rem; }
+  .about-hero { margin-bottom: 3.5rem; }
+  .toc-section { flex-direction: column; gap: 1rem; }
+  .wellness-grid { grid-template-columns: 1fr; }
+  .footer-inner { flex-direction: column; text-align: center; }
+  .nav-links a { padding: 0.4rem 0.7rem; font-size: 0.78rem; }
+}
+
+/* ── Focus accessibility ───────────────────────────────── */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--rose);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
