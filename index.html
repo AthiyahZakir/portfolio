@@ -13,13 +13,16 @@
   <header>
     <nav class="site-nav">
       <div class="nav-inner">
-        <a href="index.html" class="nav-logo">Explore 🔍︎  </a>
+        <a href="index.html" class="nav-logo">Explore 🔍︎ &emsp;</a>
         <ul class="nav-links">
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="blog.html">Projects</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </nav>
     <!-- ── On this page bar ─────────────────────────── -->
@@ -29,11 +32,11 @@
         <div class="otp-divider"></div>
         <div class="otp-links">
           <a href="#section-stack"     class="otp-link">Tech Stack</a>
-          <a href="#section-projects"  class="otp-link">Projects</a>
-          <a href="#section-journey"   class="otp-link">Journey</a>
-          <a href="#section-interests" class="otp-link">Interests</a>
-          <a href="#section-contact"   class="otp-link">Contact</a>
+          <a href="#section-projects"  class="otp-link">Recent Work</a>
+          <a href="#section-journey"   class="otp-link">Volunteer Journey</a>
+          <a href="#section-interests" class="otp-link">Blog & Thoughts</a>
         </div>
+        <span class="nav-quote">"Success is liking yourself, liking what you do, and liking how you do it" - "Maya Angelou"</span>
       </div>
     </div>
   </header>
@@ -45,7 +48,7 @@
     ══════════════════════════════════════════════════ -->
     <section class="hero-section">
       <div class="hero-text">
-        <span class="hero-eyebrow">CS Student &amp; Creative</span>
+        <span class="hero-eyebrow">Aspiring Full-Stack Developer</span>
         <h1 class="hero-heading">
           Where code<br>meets <em>creativity*</em>
         </h1>
@@ -75,24 +78,26 @@
     <!-- ══════════════════════════════════════════════════
          TECH STACK
     ══════════════════════════════════════════════════ -->
-    <section class="stack-section" id="section-stack">
+   <section class="stack-section" id="section-stack">
       <div class="section-header">
         <h2 class="section-title">Tech stack</h2>
         <span class="section-line"></span>
-        <span class="section-count">Skills &amp; tools</span>
+        <span class="section-count">13 skills &amp; tools</span>
       </div>
-
+ 
       <div class="skill-cards-grid">
-
+ 
+        <!-- Python -->
         <div class="skill-card" style="--card-bg:#fdf0f3;--card-border:#f5d6de;">
           <div class="skill-card-icon" style="color:#c9607a;">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.83l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.23l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05L0 11.97l.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.26-.02.18-.01h5.83l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.37.1-.35.07-.32.04-.28.02-.21V6.07l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.19-.01h.02l.06.01zM12 15.27a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88zm-.06-9.3a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M11.914 0C5.82 0 6.2 2.656 6.2 2.656l.007 2.752h5.814v.826H3.9S0 5.789 0 11.969c0 6.18 3.403 5.959 3.403 5.959h2.031v-2.867s-.109-3.402 3.35-3.402h5.766s3.24.052 3.24-3.131V3.129S18.28 0 11.914 0zm-3.21 1.809a1.039 1.039 0 1 1 0 2.078 1.039 1.039 0 0 1 0-2.078z"/><path d="M12.086 24c6.094 0 5.714-2.656 5.714-2.656l-.007-2.752h-5.814v-.826h8.121S24 18.211 24 12.031c0-6.18-3.403-5.959-3.403-5.959h-2.031v2.867s.109 3.402-3.35 3.402H9.45s-3.24-.052-3.24 3.131v5.397S5.72 24 12.086 24zm3.21-1.809a1.039 1.039 0 1 1 0-2.078 1.039 1.039 0 0 1 0 2.078z"/></svg>
           </div>
           <div class="skill-card-name">Python</div>
           <div class="skill-card-level">Comfortable</div>
           <div class="skill-card-bar"><div class="skill-card-fill" style="width:82%;background:linear-gradient(90deg,#f5a8c0,#c9607a);"></div></div>
         </div>
-
+ 
+        <!-- HTML & CSS -->
         <div class="skill-card" style="--card-bg:#ede7f6;--card-border:#d4c9f0;">
           <div class="skill-card-icon" style="color:#8b6bbf;">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/></svg>
@@ -101,7 +106,8 @@
           <div class="skill-card-level">Comfortable</div>
           <div class="skill-card-bar"><div class="skill-card-fill" style="width:78%;background:linear-gradient(90deg,#c4b5fd,#8b6bbf);"></div></div>
         </div>
-
+ 
+        <!-- JavaScript -->
         <div class="skill-card" style="--card-bg:#daf1ec;--card-border:#aadfd1;">
           <div class="skill-card-icon" style="color:#3d8c78;">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/></svg>
@@ -110,34 +116,97 @@
           <div class="skill-card-level">Learning</div>
           <div class="skill-card-bar"><div class="skill-card-fill" style="width:55%;background:linear-gradient(90deg,#7bbfaa,#3d8c78);"></div></div>
         </div>
-
+ 
+        <!-- Java -->
         <div class="skill-card" style="--card-bg:#fdebd8;--card-border:#f4cca6;">
           <div class="skill-card-icon" style="color:#c07840;">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M8.851 18.56s-.917.534.653.714c1.902.218 2.874.187 4.969-.211 0 0 .552.346 1.321.646-4.699 2.013-10.633-.118-6.943-1.149M8.276 15.933s-1.028.761.542.924c2.032.209 3.636.227 6.413-.308 0 0 .384.389.987.602-5.679 1.661-12.007.13-7.942-1.218M13.116 11.475c1.158 1.333-.304 2.533-.304 2.533s2.939-1.518 1.589-3.418c-1.261-1.772-2.228-2.652 3.007-5.688 0-.001-8.216 2.051-4.292 6.573M19.33 20.504s.679.559-.747.991c-2.712.822-11.288 1.069-13.669.033-.856-.373.749-.890 1.254-.998.527-.114.828-.093.828-.093-.953-.671-6.156 1.317-2.643 1.887 9.58 1.553 17.462-.7 14.977-1.820M9.292 13.21s-4.362 1.036-1.544 1.412c1.189.159 3.561.123 5.77-.062 1.806-.152 3.618-.477 3.618-.477s-.637.272-1.098.587c-4.429 1.165-12.986.623-10.522-.568 2.082-1.006 3.776-.892 3.776-.892M17.116 17.584c4.503-2.34 2.421-4.589.968-4.285-.355.074-.515.138-.515.138s.132-.207.385-.297c2.875-1.011 5.086 2.981-.928 4.562 0-.001.07-.062.09-.118M14.401 0s2.494 2.494-2.365 6.33c-3.896 3.077-.888 4.832-.001 6.836-2.274-2.053-3.943-3.858-2.824-5.539 1.644-2.469 6.197-3.665 5.19-7.627M9.734 23.924c4.322.277 10.959-.153 11.116-2.198 0 0-.302.775-3.572 1.391-3.688.694-8.239.613-10.937.168 0-.001.553.457 3.393.639"/></svg>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M8.851 18.56s-.917.534.653.714c1.902.218 2.874.187 4.969-.211 0 0 .552.346 1.321.646-4.699 2.013-10.633-.118-6.943-1.149M8.276 15.933s-1.028.761.542.924c2.032.209 3.636.227 6.413-.308 0 0 .384.389.987.602-5.679 1.661-12.007.13-7.942-1.218M13.116 11.475c1.158 1.333-.304 2.533-.304 2.533s2.939-1.518 1.589-3.418c-1.261-1.772-2.228-2.652 3.007-5.688 0-.001-8.216 2.051-4.292 6.573M19.33 20.504s.679.559-.747.991c-2.712.822-11.288 1.069-13.669.033-.856-.373.749-.89 1.254-.998.527-.114.828-.093.828-.093-.953-.671-6.156 1.317-2.643 1.887 9.58 1.553 17.462-.7 14.977-1.82M9.292 13.21s-4.362 1.036-1.544 1.412c1.189.159 3.561.123 5.77-.062 1.806-.152 3.618-.477 3.618-.477s-.637.272-1.098.587c-4.429 1.165-12.986.623-10.522-.568 2.082-1.006 3.776-.892 3.776-.892M17.116 17.584c4.503-2.34 2.421-4.589.968-4.285-.355.074-.515.138-.515.138s.132-.207.385-.297c2.875-1.011 5.086 2.981-.928 4.562 0-.001.07-.062.09-.118M14.401 0s2.494 2.494-2.365 6.33c-3.896 3.077-.888 4.832-.001 6.836-2.274-2.053-3.943-3.858-2.824-5.539 1.644-2.469 6.197-3.665 5.19-7.627M9.734 23.924c4.322.277 10.959-.153 11.116-2.198 0 0-.302.775-3.572 1.391-3.688.694-8.239.613-10.937.168 0-.001.553.457 3.393.639"/></svg>
           </div>
           <div class="skill-card-name">Java</div>
           <div class="skill-card-level">Learning</div>
           <div class="skill-card-bar"><div class="skill-card-fill" style="width:50%;background:linear-gradient(90deg,#fbc97a,#c07840);"></div></div>
         </div>
-
+ 
+        <!-- C / C++ -->
         <div class="skill-card" style="--card-bg:#fdf0f3;--card-border:#f5d6de;">
           <div class="skill-card-icon" style="color:#c9607a;">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0V0zm7.462 13.843c0 1.998.47 3.12 1.337 3.12.672 0 1.193-.504 1.496-1.428L11.4 16.58c-.563 1.658-1.595 2.587-3.14 2.587-2.26 0-3.602-1.722-3.602-5.185 0-3.505 1.37-5.227 3.644-5.227 1.931 0 2.93 1.19 3.284 3.13l-1.706.487c-.184-1.12-.631-1.85-1.47-1.85-.98 0-1.448.966-1.448 3.32zm9.617 5.072L14.99 9.003h1.9l.88 4.887c.252 1.386.462 2.77.63 4.16h.056c.168-1.386.378-2.774.63-4.16l.882-4.887h1.9l-2.09 9.912h-2.72z"/></svg>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M10.5 15.397a3.896 3.896 0 0 1-3.895-3.895 3.896 3.896 0 0 1 3.895-3.895c1.171 0 2.257.52 2.99 1.379l2.526-2.526A7.465 7.465 0 0 0 10.5 4.006a7.502 7.502 0 0 0-7.5 7.5 7.502 7.502 0 0 0 7.5 7.5 7.46 7.46 0 0 0 5.516-2.449l-2.526-2.526a3.862 3.862 0 0 1-2.99 1.366zm10.8-4.348h-1.05v-1.05h-1.5v1.05H17.7v1.5h1.05v1.05h1.5v-1.05h1.05v-1.5zm-5.25 0h-1.05v-1.05h-1.5v1.05H12.45v1.5h1.05v1.05h1.5v-1.05h1.05v-1.5z"/></svg>
+          </div>
+          <div class="skill-card-name">C &amp; C#</div>
+          <div class="skill-card-level">Learning</div>
+          <div class="skill-card-bar"><div class="skill-card-fill" style="width:40%;background:linear-gradient(90deg,#f5a8c0,#c9607a);"></div></div>
+        </div>
+ 
+        <!-- SQL -->
+        <div class="skill-card" style="--card-bg:#daf1ec;--card-border:#aadfd1;">
+          <div class="skill-card-icon" style="color:#3d8c78;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 4.477 2 7v2c0 2.523 4.477 5 10 5s10-2.477 10-5V7c0-2.523-4.477-5-10-5zm0 11c-5.523 0-10-2.477-10-5v3c0 2.523 4.477 5 10 5s10-2.477 10-5v-3c0 2.523-4.477 5-10 5zm0 5c-5.523 0-10-2.477-10-5v3c0 2.523 4.477 5 10 5s10-2.477 10-5v-3c0 2.523-4.477 5-10 5z"/></svg>
           </div>
           <div class="skill-card-name">SQL</div>
           <div class="skill-card-level">Beginner</div>
-          <div class="skill-card-bar"><div class="skill-card-fill" style="width:38%;background:linear-gradient(90deg,#f5a8c0,#c9607a);"></div></div>
+          <div class="skill-card-bar"><div class="skill-card-fill" style="width:38%;background:linear-gradient(90deg,#7bbfaa,#3d8c78);"></div></div>
         </div>
-
+ 
+        <!-- React -->
+        <div class="skill-card" style="--card-bg:#fdebd8;--card-border:#f4cca6;">
+          <div class="skill-card-icon" style="color:#c07840;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38a2.167 2.167 0 0 0-1.096-.278zm-.005 1.09c.278 0 .513.06.709.173.989.57 1.27 2.612.698 5./207-.24-.065-.494-.127-.75-.183a19.52 19.52 0 0 0-.414-1.ordinance107 1.689 1.689 0 0 0-.062-.145c-.651-1.417-1.478-2.585-2.33-3.408.68-.44 1.327-.662 1.895-.662l.254.001v-.001zM7.27 3.405c.57 0 1.216.222 1.897.66-.854.826-1.682 1.997-2.332 3.415a19.76 19.76 0 0 0-.476 1.251 19.625 19.625 0 0 0-.75.184c-2.592-.587-4.154-1.877-3.61-3.162.406-.94 1.725-2.348 5.271-2.348zm-.11 4.708c.24-.69.516-1.343.826-1.935.31.592.585 1.244.826 1.935H7.16zm9.514 0H14.99c.24-.69.517-1.343.826-1.935.311.592.586 1.244.826 1.935zM12 7.558c.554.705 1.084 1.54 1.555 2.459H10.45c.47-.92 1-1.755 1.55-2.46zM5.897 10.7c.232-.07.482-.137.745-.201l.263 1.042a19.34 19.34 0 0 0-.82 1.76 19.29 19.29 0 0 0-.188.5c-.896-.283-1.648-.624-2.217-.987-.857-.55-1.257-1.094-1.257-1.81 0-1.274 1.46-2.476 3.474-3.304zm12.207 0c2.013.828 3.474 2.03 3.474 3.304 0 .716-.4 1.26-1.257 1.81-.57.363-1.32.704-2.217.988a19.289 19.289 0 0 0-.189-.5 19.342 19.342 0 0 0-.82-1.76l.264-1.043c.263.064.512.13.745.201zM12 10.988c.357 0 .71.014 1.06.04-.34.62-.663 1.28-.958 1.977-.294-.696-.617-1.356-.957-1.977.3-.026.6-.04.855-.04zm-1.775.127c-.34.62-.662 1.28-.957 1.977-.294-.696-.618-1.356-.957-1.977C8.61 11.09 8.96 11.076 9.31 11.076c.095 0 .187.002.28.005h.001c.205-.012.412-.018.624-.018.212 0 .42.006.626.018h.001c.093-.003.185-.005.28-.005.35 0 .7.014 1.05.04zm-3.68.626c.241.692.516 1.346.826 1.938-.31.592-.585 1.245-.825 1.937H7.16c-.24-.692-.516-1.345-.826-1.937.31-.593.585-1.246.826-1.938zM16.84 11.74c.24.692.516 1.345.826 1.937-.31.593-.585 1.246-.826 1.938h-1.49c-.24-.692-.515-1.345-.826-1.938.311-.592.586-1.245.826-1.937zm-4.84.612c.35.72.666 1.484.945 2.272-.282.788-.597 1.552-.945 2.272-.35-.72-.664-1.484-.945-2.272.281-.788.596-1.552.945-2.272zm-3.68 2.908c.311.592.586 1.245.826 1.938H7.658c-.24-.693-.515-1.346-.825-1.938zM16.84 15.26c-.24.693-.515 1.346-.825 1.938h-1.488c.24-.693.515-1.346.826-1.938zm-7.89 2.608c.296.697.62 1.357.958 1.978-.3.026-.6.04-.855.04-.36 0-.71-.014-1.06-.04.34-.621.663-1.281.958-1.978zm6.1 0c.296.697.62 1.357.957 1.978a18.97 18.97 0 0 1-1.05.04c-.212 0-.42-.006-.625-.018h-.001a18.888 18.888 0 0 1-.624.017c-.213 0-.42-.006-.625-.018.296-.696.62-1.356.968-1.999zM12 16.458c.554.705 1.084 1.54 1.555 2.46h-3.1c.47-.92 1-1.755 1.545-2.46zm3.944 1.004a19.63 19.63 0 0 0-.415 1.107c-.254.056-.507.118-.748.183-2.59.587-4.155 1.877-3.61 3.162.406.94 1.725 2.348 5.271 2.348.569 0 1.215-.222 1.896-.66-.854-.827-1.681-1.997-2.332-3.416a19.766 19.766 0 0 0-.476-1.25l.414.076zm-7.888 0c-.158.41-.31.826-.476 1.25-.65 1.42-1.478 2.59-2.332 3.416.681.44 1.328.661 1.896.661 3.547 0 4.866-1.408 5.272-2.348.544-1.285-1.02-2.575-3.61-3.162a19.547 19.547 0 0 0-.75-.183zm5.48.95c.263.065.513.131.745.201 2.014.828 3.475 2.03 3.475 3.304 0 .716-.4 1.26-1.257 1.81-.57.362-1.32.704-2.217.987a19.29 19.29 0 0 0-.189-.5 19.34 19.34 0 0 0-.82-1.76l.263-1.042zM8.642 19.613c.263-.065.513-.131.745-.202l.263 1.043a19.342 19.342 0 0 0-.82 1.76 19.29 19.29 0 0 0-.188.5c-.897-.283-1.648-.625-2.218-.988-.857-.55-1.257-1.093-1.257-1.81 0-1.273 1.462-2.475 3.475-3.303z"/></svg>
+          </div>
+          <div class="skill-card-name">React</div>
+          <div class="skill-card-level">Learning</div>
+          <div class="skill-card-bar"><div class="skill-card-fill" style="width:35%;background:linear-gradient(90deg,#fbc97a,#c07840);"></div></div>
+        </div>
+ 
+        <!-- React Native -->
+        <div class="skill-card" style="--card-bg:#fdf0f3;--card-border:#f5d6de;">
+          <div class="skill-card-icon" style="color:#c9607a;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12.662a2.338 2.338 0 1 0 0-4.676 2.338 2.338 0 0 0 0 4.676zm6.279-1.607c-.188-.094-.377-.182-.57-.265.056-.224.105-.449.147-.674.456-2.476.105-4.44-.997-5.07-.524-.303-1.134-.303-1.804-.065-.392.142-.806.371-1.23.68A9.143 9.143 0 0 0 12 5.404a9.136 9.136 0 0 0-1.826.257c-.422-.309-.837-.538-1.231-.68-.669-.238-1.28-.238-1.803.065-1.101.63-1.452 2.594-.997 5.07.042.225.09.45.147.674a13.74 13.74 0 0 0-.57.265C3.973 11.701 3 13.027 3 14.4c0 1.373.973 2.699 2.72 3.545.188.094.378.182.57.265-.056.225-.105.449-.147.674-.456 2.476-.104 4.44.997 5.07.524.303 1.134.303 1.804.065.393-.142.807-.371 1.231-.68.594.166 1.203.258 1.825.257a9.12 9.12 0 0 0 1.826-.257c.422.309.837.538 1.231.68.669.238 1.279.238 1.803-.065 1.102-.63 1.453-2.594.997-5.07a13.78 13.78 0 0 0-.147-.674c.192-.083.381-.171.569-.265 1.748-.846 2.721-2.172 2.721-3.545 0-1.373-.973-2.699-2.72-3.538zm-1.24 5.988c-.16.077-.322.15-.486.217a20.57 20.57 0 0 0-.638-1.484 20.434 20.434 0 0 0 .453-1.581c.172-.076.34-.156.505-.24 1.434-.694 2.277-1.682 2.277-2.555 0-.873-.843-1.861-2.277-2.556a11.95 11.95 0 0 0-.505-.239 20.43 20.43 0 0 0-.453-1.58c.217-.503.418-.992.638-1.485.164.067.327.14.487.217 1.434.694 2.277 1.682 2.277 2.555v.001c0 .872-.843 1.86-2.278 2.555zM7.53 18.79c-.164-.067-.327-.14-.487-.217-1.434-.694-2.277-1.682-2.277-2.555 0-.873.843-1.861 2.277-2.555.16-.077.323-.15.487-.218a20.41 20.41 0 0 0 .453 1.581 20.567 20.567 0 0 0-.453 1.58c-.22.501-.42.99-.638 1.485l.638-1.101zm1.05-4.79c.296-.693.638-1.354 1.015-1.968.54-.018 1.084-.026 1.635-.026.55 0 1.094.008 1.634.026.378.614.72 1.275 1.016 1.968-.296.693-.638 1.354-1.016 1.968-.54.018-1.084.026-1.634.026-.551 0-1.095-.008-1.635-.026a17.36 17.36 0 0 1-1.015-1.968zm6.87-3.536a18.1 18.1 0 0 0-.452-1.58c.217-.502.418-.99.638-1.485.164.067.326.14.486.217 1.435.694 2.278 1.683 2.278 2.556s-.843 1.86-2.278 2.556a11.95 11.95 0 0 0-.487-.218 20.4 20.4 0 0 0 .453-1.58l-.638 1.534z"/></svg>
+          </div>
+          <div class="skill-card-name">React Native</div>
+          <div class="skill-card-level">Beginner</div>
+          <div class="skill-card-bar"><div class="skill-card-fill" style="width:25%;background:linear-gradient(90deg,#f5a8c0,#c9607a);"></div></div>
+        </div>
+ 
+        <!-- Angular -->
         <div class="skill-card" style="--card-bg:#ede7f6;--card-border:#d4c9f0;">
           <div class="skill-card-icon" style="color:#8b6bbf;">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1.27a11 11 0 00-3.48 21.46c.55.09.73-.28.73-.55v-1.84c-3.03.64-3.67-1.46-3.67-1.46-.55-1.29-1.28-1.65-1.28-1.65-.92-.65.1-.65.1-.65 1.1 0 1.73 1.1 1.73 1.1.92 1.65 2.57 1.2 3.21.92a2 2 0 01.64-1.47c-2.47-.27-5.04-1.19-5.04-5.5 0-1.1.46-2.1 1.2-2.84a3.76 3.76 0 010-2.93s.91-.28 3.11 1.1c1.8-.49 3.7-.49 5.5 0 2.1-1.38 3.02-1.1 3.02-1.1a3.76 3.76 0 010 2.93c.83.74 1.2 1.74 1.2 2.84 0 4.31-2.57 5.23-5.04 5.5.45.37.82.92.82 2.02v3.03c0 .27.1.64.73.55A11 11 0 0012 1.27"/></svg>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M9.931 12.645h4.138l-2.07-4.908m0-7.737L.68 3.982l1.726 14.771L12 24l9.596-5.242L23.32 3.982 12 .001zm7.064 18.31h-2.638l-1.422-3.503H8.996l-1.422 3.504h-2.64L12 2.65z"/></svg>
+          </div>
+          <div class="skill-card-name">Angular</div>
+          <div class="skill-card-level">Beginner</div>
+          <div class="skill-card-bar"><div class="skill-card-fill" style="width:22%;background:linear-gradient(90deg,#c4b5fd,#8b6bbf);"></div></div>
+        </div>
+ 
+        <!-- MongoDB -->
+        <div class="skill-card" style="--card-bg:#daf1ec;--card-border:#aadfd1;">
+          <div class="skill-card-icon" style="color:#3d8c78;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.193 9.555c-1.264-5.58-4.252-7.414-4.573-8.115-.28-.394-.53-.954-.735-1.44-.036.495-.055.685-.523 1.184-.723.566-4.438 3.682-4.74 10.02-.282 5.912 4.27 9.435 4.888 9.884l.07.05A73.49 73.49 0 0 1 11.91 24h.481c.114-1.032.284-2.056.51-3.07.417-.296.604-.463.85-.693a11.342 11.342 0 0 0 3.639-8.464c.01-.814-.103-1.662-.197-2.218z"/></svg>
+          </div>
+          <div class="skill-card-name">MongoDB</div>
+          <div class="skill-card-level">Beginner</div>
+          <div class="skill-card-bar"><div class="skill-card-fill" style="width:28%;background:linear-gradient(90deg,#7bbfaa,#3d8c78);"></div></div>
+        </div>
+ 
+        <!-- Firebase -->
+        <div class="skill-card" style="--card-bg:#fdebd8;--card-border:#f4cca6;">
+          <div class="skill-card-icon" style="color:#c07840;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M3.89 15.672L6.255.461A.542.542 0 0 1 7.27.288l2.543 4.771zm16.794 3.692l-2.25-14a.54.54 0 0 0-.919-.295L3.316 19.365l7.856 4.427a1.621 1.621 0 0 0 1.588 0zM14.3 9.688L12.86 3.445a.542.542 0 0 0-1.052.187l-2.16 13.618z"/></svg>
+          </div>
+          <div class="skill-card-name">Firebase</div>
+          <div class="skill-card-level">Beginner</div>
+          <div class="skill-card-bar"><div class="skill-card-fill" style="width:30%;background:linear-gradient(90deg,#fbc97a,#c07840);"></div></div>
+        </div>
+ 
+        <!-- Git & GitHub -->
+        <div class="skill-card" style="--card-bg:#fdf0f3;--card-border:#f5d6de;">
+          <div class="skill-card-icon" style="color:#c9607a;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
           </div>
           <div class="skill-card-name">Git &amp; GitHub</div>
           <div class="skill-card-level">Comfortable</div>
-          <div class="skill-card-bar"><div class="skill-card-fill" style="width:70%;background:linear-gradient(90deg,#c4b5fd,#8b6bbf);"></div></div>
+          <div class="skill-card-bar"><div class="skill-card-fill" style="width:70%;background:linear-gradient(90deg,#f5a8c0,#c9607a);"></div></div>
         </div>
-
+ 
       </div>
     </section>
 
@@ -146,16 +215,16 @@
     ══════════════════════════════════════════════════ -->
     <section class="projects-glimpse-section" id="section-projects">
       <div class="section-header">
-        <h2 class="section-title">Recent projects</h2>
+        <h2 class="section-title">Upcoming projects</h2>
         <span class="section-line"></span>
         <a href="blog.html" class="section-link-btn">View all →</a>
       </div>
 
       <div class="glimpse-grid">
 
-        <a href="https://github.com/AthiyahZakir/Traffic-data-Analyzing-System" target="_blank" rel="noopener" class="glimpse-card">
+        <a href="https://github.com/AthiyahZakir" target="_blank" rel="noopener" class="glimpse-card">
           <div class="glimpse-img">
-            <img src="images/project1.jpg" alt="Traffic Data System">
+            <img src="images/fashion_style.jpg" alt="fasion ai ">
             <div class="glimpse-overlay">
               <span class="glimpse-arrow">↗</span>
             </div>
@@ -163,41 +232,41 @@
           <div class="glimpse-body">
             <div class="glimpse-tags">
               <span class="gtag rose">Python</span>
-              <span class="gtag lavender">Data Analysis</span>
+              <span class="gtag lavender">Machine Learning</span>
             </div>
-            <h3 class="glimpse-title">Traffic Data Analyzing System</h3>
+            <h3 class="glimpse-title">StyleBot - AI fashion Web App</h3>
           </div>
         </a>
 
-        <a href="https://github.com/AthiyahZakir/Weather-App" target="_blank" rel="noopener" class="glimpse-card">
+        <a href="https://github.com/AthiyahZakir" target="_blank" rel="noopener" class="glimpse-card">
           <div class="glimpse-img">
-            <img src="images/project4.jpg" alt="Weather App">
+            <img src="images/loowa.jpg" alt="loo app">
             <div class="glimpse-overlay">
               <span class="glimpse-arrow">↗</span>
             </div>
           </div>
           <div class="glimpse-body">
             <div class="glimpse-tags">
-              <span class="gtag mint">JavaScript</span>
-              <span class="gtag lavender">API</span>
+              <span class="gtag mint">TypeSrcipt</span>
+              <span class="gtag rose">React Native</span>
             </div>
-            <h3 class="glimpse-title">Dynamic Weather Detection App</h3>
+            <h3 class="glimpse-title">WaLoo - A Restroom Mobile App Map</h3>
           </div>
         </a>
 
-        <a href="https://github.com/AthiyahZakir/Classic-Tic-Tac-Toe---Game" target="_blank" rel="noopener" class="glimpse-card">
+        <a href="https://github.com/AthiyahZakir" target="_blank" rel="noopener" class="glimpse-card">
           <div class="glimpse-img">
-            <img src="images/project6.jpg" alt="Tic Tac Toe">
+            <img src="images/gaming_world.jpg" alt="gamimg world">
             <div class="glimpse-overlay">
               <span class="glimpse-arrow">↗</span>
             </div>
           </div>
           <div class="glimpse-body">
             <div class="glimpse-tags">
-              <span class="gtag rose">HTML &amp; CSS</span>
-              <span class="gtag amber">JS</span>
+              <span class="gtag rose">Unreal Engine</span>
+              <span class="gtag lavender">C#</span>
             </div>
-            <h3 class="glimpse-title">Tic Tac Toe Classic Game</h3>
+            <h3 class="glimpse-title">DisasterX - Simulation Platform</h3>
           </div>
         </a>
 
@@ -209,9 +278,9 @@
     ══════════════════════════════════════════════════ -->
     <section class="journey-section" id="section-journey">
       <div class="section-header">
-        <h2 class="section-title">Club &amp; volunteer journey</h2>
+        <h2 class="section-title">IEEE Volunteer Journey</h2>
         <span class="section-line"></span>
-        <span class="section-count">IEEE &amp; beyond</span>
+        <span class="section-count"></span>
       </div>
 
       <div class="journey-layout">
@@ -223,11 +292,12 @@
             <div class="tl-dot" style="background:var(--rose);"></div>
             <div class="tl-body">
               <div class="tl-meta">
-                <span class="tl-date">2024 – Present</span>
-                <span class="tl-badge badge-rose">IEEE Student Branch</span>
+                <span class="tl-date">2026 – Present</span>
+                <span class="tl-badge badge-rose">IEEE Robotics and Automation Society</span>
               </div>
-              <h3 class="tl-role">IEEE Volunteer &amp; Hackathon Participant</h3>
-              <p class="tl-desc">Competed in the IEEE Xtreme 24-Hour Programming Challenge, collaborated on algorithmic solutions, and helped organise student tech events.</p>
+              <h3 class="tl-role">Industry Outreach Volunteer for Vertex’25</h3>
+              <p class="tl-desc">Led corporate sponsorship and partnership management for VERTEX'25, a robotics competition
+Successfully secured multi-tier sponsorships through strategic company outreach</p>
             </div>
           </div>
 
@@ -235,11 +305,12 @@
             <div class="tl-dot" style="background:var(--lavender);"></div>
             <div class="tl-body">
               <div class="tl-meta">
-                <span class="tl-date">2023 – 2024</span>
-                <span class="tl-badge badge-lavender">Women in STEM</span>
+                <span class="tl-date">2025 – 2026</span>
+                <span class="tl-badge badge-lavender">IEEE Computer Society Student Branch Chapter</span>
               </div>
-              <h3 class="tl-role">Content Lead &amp; Event Organiser</h3>
-              <p class="tl-desc">Created social media content spotlighting women in tech and co-organised a panel event with industry guests attended by 80+ people.</p>
+              <h3 class="tl-role">Delegate Handling Volunteer for IX’25</h3>
+              <p class="tl-desc">Led delegate coordination for Event IX, a 24-hour UI/UX design competition
+                Managed on-ground operations, continuous team support, and ensured seamless execution at all phases</p>
             </div>
           </div>
 
@@ -247,11 +318,12 @@
             <div class="tl-dot" style="background:var(--mint);"></div>
             <div class="tl-body">
               <div class="tl-meta">
-                <span class="tl-date">2023</span>
-                <span class="tl-badge badge-mint">Coding Club</span>
+                <span class="tl-date">2025</span>
+                <span class="tl-badge badge-mint">IEEE Women in Engineering Affinity Group</span>
               </div>
-              <h3 class="tl-role">Member &amp; Project Contributor</h3>
-              <p class="tl-desc">Attended weekly meetups and collaborated on a community-focused app — where I first discovered a love for building things together.</p>
+              <h3 class="tl-role">Industry Outreach Volunteer for Adaptic’25</h3>
+              <p class="tl-desc">Managed over 40 industry partnerships for Adaptiq, a 24-hour national competition
+                  Led real-time issue resolution and collaborated with 20 teams to ensure seamless operations at the event</p>
             </div>
           </div>
 
@@ -284,7 +356,7 @@
             <button class="slider-btn" id="sliderNext" aria-label="Next">›</button>
           </div>
           <!-- Add more images hint -->
-          <p class="slider-hint">Add your own photos by replacing journey1.jpg – journey4.jpg in your images folder.</p>
+          <p class="slider-hint"></p>
         </div>
 
       </div>
@@ -428,6 +500,26 @@
       document.getElementById('sliderNext').addEventListener('click', () => goTo(current + 1));
 
       resetTimer();
+    })();
+  </script>
+  <!-- ── Mobile nav toggle ────────────────────────────── -->
+  <script>
+    (function () {
+      const toggle = document.getElementById('navToggle');
+      const links  = document.querySelector('.nav-links');
+      toggle.addEventListener('click', function () {
+        const open = links.classList.toggle('open');
+        toggle.classList.toggle('open', open);
+        toggle.setAttribute('aria-expanded', open);
+      });
+      /* Close menu when a link is tapped */
+      links.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          links.classList.remove('open');
+          toggle.classList.remove('open');
+          toggle.setAttribute('aria-expanded', false);
+        });
+      });
     })();
   </script>
 

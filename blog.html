@@ -13,13 +13,16 @@
   <header>
     <nav class="site-nav">
       <div class="nav-inner">
-        <a href="index.html" class="nav-logo">Explore </a>
+        <a href="index.html" class="nav-logo">Explore  🔍︎ &emsp; </a>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="blog.html" class="active">Projects</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </nav>
   </header>
@@ -28,34 +31,50 @@
 
     <!-- ── Page Hero ──────────────────────────────────── -->
     <section class="projects-hero">
-      <span class="page-eyebrow">Project portfolio</span>
+      <div class="projects-hero-inner">
 
-      <h1 class="projects-heading">
-        Building things<br>with <em>code &amp; curiosity</em>
-      </h1>
+        <div class="projects-hero-text">
+          <span class="page-eyebrow">Project portfolio</span>
 
-      <p class="projects-intro">
-        From traffic data systems to interactive games, here's a collection of my
-        technical projects — each one a new challenge conquered and a skill earned.
-        Every line of code has taught me something about problem-solving, design
-        thinking, and the power of technology to make a difference.
-      </p>
+          <h1 class="projects-heading">
+            Building things<br>with <em>code &amp; curiosity</em>
+          </h1>
 
-      <div class="stats-row">
-        <div class="stat">
-          <span class="stat-num">6</span>
-          <span class="stat-label">Projects</span>
+          <p class="projects-intro">
+            From traffic data systems to interactive games, here's a collection of my
+            technical projects — each one a new challenge conquered and a skill earned.
+            Every line of code has taught me something about problem-solving, design
+            thinking, and the power of technology to make a difference.
+          </p>
+
+          <div class="stats-row">
+            <div class="stat">
+              <span class="stat-num">12+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">8+</span>
+              <span class="stat-label">Languages</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">24h</span>
+              <span class="stat-label">Hackathons</span>
+            </div>
+          </div>
         </div>
-        <div class="stat">
-          <span class="stat-num">4+</span>
-          <span class="stat-label">Languages</span>
+
+        <!-- ── Hero photo ──────────────────────────── -->
+        <div class="projects-hero-img">
+          <div class="hero-img-frame">
+            <img src="images/projects-hero.jpeg" alt="Athiyah coding and building projects">
+          </div>
+          <div class="hero-img-tag">
+            <span class="tag-label">Always building</span>
+            <span class="tag-value">Next project in progress ✦</span>
+          </div>
         </div>
-        <div class="stat">
-          <span class="stat-num">24h</span>
-          <span class="stat-label">Hackathon</span>
-        </div>
+
       </div>
-
     </section>
 
     <!-- ── Projects Grid ──────────────────────────────── -->
@@ -63,34 +82,59 @@
       <div class="section-header">
         <h2 class="section-title">Featured Projects</h2>
         <span class="section-line"></span>
-        <span class="section-count">6 projects</span>
+        <span class="section-count">12 projects</span>
       </div>
 
       <div class="projects-grid">
 
-        <!-- Featured: Traffic System -->
+<!-- Featured: Disaster-X  -->
         <article class="project-card featured">
           <div class="card-img">
-            <img src="images/project1.jpg" alt="Traffic data visualization">
+            <img src="images/project7.jpeg" alt="Disaster Simulation Platform">
           </div>
           <div class="card-body">
             <div class="card-tag-row">
-              <span class="card-tag tag-rose">Python</span>
-              <span class="card-tag tag-lavender">Data Analysis</span>
-              <span class="card-tag tag-mint">Matplotlib</span>
+              <span class="card-tag tag-rose">Unreal Engine</span>
+              <span class="card-tag tag-lavender">C#</span>
+              <span class="card-tag tag-mint">Elemental Physics</span>
             </div>
-            <h3 class="card-title">Traffic Data Analyzing System</h3>
+            <h3 class="card-title">Disaster Simulation Platform</h3>
             <p class="card-desc">
-              An intelligent data analysis system that processes and visualizes large-scale
-              traffic datasets, providing actionable insights for urban planning and
-              traffic management optimization.
+              A multiplayer disaster simulation game designed to help civil engineers and architects test modeled
+              structures ,Implemented core game mechanics and physics simulations using C# with OOP design
+              patterns in Unreal Engine
             </p>
             <ul class="card-features">
-              <li>Large-scale data processing &amp; statistical analysis</li>
-              <li>Visualization with histograms and pattern charts</li>
-              <li>Real-time traffic pattern recognition</li>
+              <li>Game Development &amp; Reality Simulation</li>
+              <li>UI Widgets and dynamic interactive components </li>
+              <li>C Programing Language with OOP Structures</li>
             </ul>
-            <a href="https://github.com/AthiyahZakir/Traffic-data-Analyzing-System" target="_blank" rel="noopener" class="card-link">
+            <a href="https://github.com/AthiyahZakir" target="_blank" rel="noopener" class="card-link">
+              View on GitHub →
+            </a>
+          </div>
+        </article>
+
+        <!-- Brick and Blooms -->
+        <article class="project-card">
+          <div class="card-img">
+            <img src="images/project8.jpg" alt="Real Estate Dynamic Interface">
+          </div>
+          <div class="card-body">
+            <div class="card-tag-row">
+              <span class="card-tag tag-lavender">React</span>
+              <span class="card-tag tag-mint">Node.js</span>
+            </div>
+            <h3 class="card-title">Brick & Blooms - Real Estate App</h3>
+            <p class="card-desc">
+              Built a fullstack web application with a Node.js/Express REST API backend, SQL database, and React
+              frontend; enabling users to add, view, and filter property listings
+            </p>
+            <ul class="card-features">
+              <li>Dynamic Property Allocation &amp; tracking</li>
+              <li>Buyer data storage &amp; retrieval</li>
+            </ul>
+            <a href="https://github.com/AthiyahZakir/estate-app" target="_blank" rel="noopener" class="card-link">
               View on GitHub →
             </a>
           </div>
@@ -116,6 +160,34 @@
               <li>Passenger data storage &amp; retrieval</li>
             </ul>
             <a href="https://github.com/AthiyahZakir/Airplane-Booking-Solution-" target="_blank" rel="noopener" class="card-link">
+              View on GitHub →
+            </a>
+          </div>
+        </article>
+
+        <!-- Featured: TRAFFIC  -->
+        <article class="project-card featured">
+          <div class="card-img">
+            <img src="images/project1.jpg" alt="Traffic data visualization">
+          </div>
+          <div class="card-body">
+            <div class="card-tag-row">
+              <span class="card-tag tag-rose">Python</span>
+              <span class="card-tag tag-lavender">Data Analysis</span>
+              <span class="card-tag tag-mint">Matplotlib</span>
+            </div>
+            <h3 class="card-title">Traffic Data Analyzing System</h3>
+            <p class="card-desc">
+              An intelligent data analysis system that processes and visualizes large-scale
+              traffic datasets, providing actionable insights for urban planning and
+              traffic management optimization.
+            </p>
+            <ul class="card-features">
+              <li>Large-scale data processing &amp; statistical analysis</li>
+              <li>Visualization with histograms and pattern charts</li>
+              <li>Real-time traffic pattern recognition</li>
+            </ul>
+            <a href="https://github.com/AthiyahZakir/Traffic-data-Analyzing-System" target="_blank" rel="noopener" class="card-link">
               View on GitHub →
             </a>
           </div>
@@ -147,7 +219,7 @@
         </article>
 
         <!-- Weather App — featured -->
-        <article class="project-card featured">
+        <article class="project-card">
           <div class="card-img">
             <img src="images/project4.jpg" alt="Weather app interface">
           </div>
@@ -169,6 +241,56 @@
               <li>Smooth animations &amp; transitions</li>
             </ul>
             <a href="https://github.com/AthiyahZakir/Weather-App" target="_blank" rel="noopener" class="card-link">
+              View on GitHub →
+            </a>
+          </div>
+        </article>
+
+        <!-- Libray management -->
+        <article class="project-card">
+          <div class="card-img">
+            <img src="images/project9.jpg" alt="Book Management System">
+          </div>
+          <div class="card-body">
+            <div class="card-tag-row">
+              <span class="card-tag tag-mint">HTML &amp; CSS</span>
+              <span class="card-tag tag-rose">Javascript</span>
+            </div>
+            <h3 class="card-title">Library Management System</h3>
+            <p class="card-desc">
+              A dynamic book search application built with React that allows users to 
+              search through a collection of books and manage their personal favorites list.
+            </p>
+            <ul class="card-features">
+              <li>Smart Large Data Storage</li>
+              <li>User Friendly Interface</li>
+            </ul>
+            <a href="https://github.com/AthiyahZakir/Library-Mangaement-System-" target="_blank" rel="noopener" class="card-link">
+              View on GitHub →
+            </a>
+          </div>
+        </article>
+
+        <!-- Life Below Water -->
+        <article class="project-card featured">
+          <div class="card-img">
+            <img src="images/project3.jpg" alt="Ocean conservation website">
+          </div>
+          <div class="card-body">
+            <div class="card-tag-row">
+              <span class="card-tag tag-mint">HTML &amp; CSS</span>
+              <span class="card-tag tag-rose">Web</span>
+            </div>
+            <h3 class="card-title">Life Below Water — Awareness Site</h3>
+            <p class="card-desc">
+              An educational platform dedicated to ocean conservation, aligned with
+              UN Sustainable Development Goal 14, featuring responsive multi-page design.
+            </p>
+            <ul class="card-features">
+              <li>Educational conservation content</li>
+              <li>Responsive multi-page layout</li>
+            </ul>
+            <a href="https://github.com/AthiyahZakir" target="_blank" rel="noopener" class="card-link">
               View on GitHub →
             </a>
           </div>
@@ -199,26 +321,79 @@
           </div>
         </article>
 
-        <!-- Life Below Water -->
+        <!-- simon game -->
         <article class="project-card">
           <div class="card-img">
-            <img src="images/project3.jpg" alt="Ocean conservation website">
+            <img src="images/project10.jpg" alt="simon game ">
           </div>
           <div class="card-body">
             <div class="card-tag-row">
-              <span class="card-tag tag-mint">HTML &amp; CSS</span>
-              <span class="card-tag tag-rose">Web</span>
+              <span class="card-tag tag-mint">CSS &amp; BootStrap</span>
+              <span class="card-tag tag-rose">Javascript</span>
             </div>
-            <h3 class="card-title">Life Below Water — Awareness Site</h3>
+            <h3 class="card-title">"Simon" - The Memory Game</h3>
             <p class="card-desc">
-              An educational platform dedicated to ocean conservation, aligned with
-              UN Sustainable Development Goal 14, featuring responsive multi-page design.
+              Simon Game is an interactive website inspired by the popular 
+              memory-based sound game that challenges players to recall and repeat color
+               and sound patterns. It is built using advanced JavaScript and CSS 
+              to deliver a dynamic, engaging, and responsive user experience. 
             </p>
             <ul class="card-features">
-              <li>Educational conservation content</li>
-              <li>Responsive multi-page layout</li>
+              <li>Interactive Memory Game</li>
+              <li>Advanced Repetition Logic</li>
             </ul>
-            <a href="https://github.com/AthiyahZakir" target="_blank" rel="noopener" class="card-link">
+            <a href="https://github.com/AthiyahZakir/Simon-Game" target="_blank" rel="noopener" class="card-link">
+              View on GitHub →
+            </a>
+          </div>
+        </article>
+
+        <!-- Skills company website -->
+        <article class="project-card">
+          <div class="card-img">
+            <img src="images/project11.jpg" alt="Skills company website">
+          </div>
+          <div class="card-body">
+            <div class="card-tag-row">
+              <span class="card-tag tag-lavender">React + Vite &amp; Tailwind CSS</span>
+              <span class="card-tag tag-rose">Node.js</span>
+            </div>
+            <h3 class="card-title">Skills Company Website</h3>
+            <p class="card-desc">
+              Full-stack website for a skills training company. Built with React + Vite, Tailwind CSS, and Node/Express. Features a student application form 
+              that saves submissions directly to Google Sheets. Pages: Home, About, Sign Up.
+            </p>
+            <ul class="card-features">
+              <li>Google Sheets API integration</li>
+              <li>Static & Dynamic Webpages</li>
+            </ul>
+            <a href="https://github.com/AthiyahZakir/skills-company-website" target="_blank" rel="noopener" class="card-link">
+              View on GitHub →
+            </a>
+          </div>
+        </article>
+
+        <!-- Async User Explorer -->
+        <article class="project-card">
+          <div class="card-img">
+            <img src="images/project12.jpg" alt="Async User Explorer">
+          </div>
+          <div class="card-body">
+            <div class="card-tag-row">
+              <span class="card-tag tag-mint">Backend</span>
+              <span class="card-tag tag-amber">JavaScript (ES6+) </span>
+            </div>
+            <h3 class="card-title">Async User Explorer</h3>
+            <p class="card-desc">
+              A small web application that fetches user data from a public API and displays it dynamically 
+              as styled user cards. Demonstrates modern JavaScript (ES6+) features, including async/await, Promises, 
+              destructuring, spread/rest operators, and array methods like map, filter, and reduce.
+            </p>
+            <ul class="card-features">
+              <li> synchronous code</li>
+              <li>Api Calling</li>
+            </ul>
+            <a href="https://github.com/AthiyahZakir/AsyncUserExplorer" target="_blank" rel="noopener" class="card-link">
               View on GitHub →
             </a>
           </div>
@@ -252,6 +427,25 @@
       <span class="footer-copy">&copy; 2025 · All rights reserved</span>
     </div>
   </footer>
+
+  <script>
+  (function () {
+    const toggle = document.getElementById('navToggle');
+    const links  = document.querySelector('.nav-links');
+    toggle.addEventListener('click', function () {
+      const open = links.classList.toggle('open');
+      toggle.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', open);
+    });
+    links.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        links.classList.remove('open');
+        toggle.classList.remove('open');
+        toggle.setAttribute('aria-expanded', false);
+      });
+    });
+  })();
+</script>
 
 </body>
 </html>

@@ -477,13 +477,76 @@ main {
 .info-cards      { animation: fadeUp 0.55s ease both 0.35s; }
 .form-panel      { animation: fadeUp 0.6s  ease both 0.15s; }
 
+/* ── NAV MOBILE HAMBURGER ──────────────────────────────── */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 12px;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.nav-toggle:hover { background: var(--rose-pale); }
+
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--ink);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-toggle.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
 /* ── RESPONSIVE ────────────────────────────────────────── */
 @media (max-width: 860px) {
-  .contact-layout {
+
+  .nav-toggle { display: flex; }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0; right: 0;
+    background: rgba(253, 248, 243, 0.98);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0.75rem 1.25rem 1rem;
+    z-index: 99;
+  }
+
+  .nav-links.open { display: flex; }
+
+ .nav-links a {
+  padding: 0.1rem 0.85rem;
+  font-size: 0.78rem;
+  border-radius: 999px;
+}
+
+  .site-nav { padding: 0 1.25rem; position: relative; }
+.contact-layout {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
+
 }
+
+  
+
 
 @media (max-width: 600px) {
   .site-nav { padding: 0 1.25rem; }
@@ -494,11 +557,37 @@ main {
   .btn-send, .btn-reset { justify-content: center; }
   .footer-inner { flex-direction: column; text-align: center; }
   .nav-links a { padding: 0.4rem 0.7rem; font-size: 0.78rem; }
+.nav-toggle { display: flex; }
+
+.nav-links {
+  display: none;
+  position: absolute;
+  top: 64px; /* just one nav bar on these pages */
+  left: 0; right: 0;
+  background: rgba(253, 248, 243, 0.98);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  padding: 0.75rem 1.25rem 1rem;
+  z-index: 99;
+}
+
+.nav-links.open { display: flex; }
+
+.nav-links a {
+  padding: 0.1rem 0.85rem;
+  font-size: 0.78rem;
+  border-radius: 999px;
+}
+
+.site-nav { padding: 0 1.25rem; position: relative; }
+
 }
 
 /* ── Focus accessibility ───────────────────────────────── */
-a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
-  outline: 2px solid var(--rose);
-  outline-offset: 3px;
-  border-radius: 4px;
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+  outline: none;
 }

@@ -13,13 +13,16 @@
   <header>
     <nav class="site-nav">
       <div class="nav-inner">
-        <a href="index.html" class="nav-logo">Explore </a>
+        <a href="index.html" class="nav-logo">Explore  🔍︎ &emsp; </a>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="blog.html">Projects</a></li>
           <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </nav>
   </header>
@@ -74,7 +77,7 @@
           <a href="https://github.com/AthiyahZakir" target="_blank" rel="noopener" class="social-link">
             GitHub ↗
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-link">
+          <a href="https://www.linkedin.com/in/athiyah-zakir/" target="_blank" rel="noopener" class="social-link">
             LinkedIn ↗
           </a>
           <a href="https://instagram.com" target="_blank" rel="noopener" class="social-link">
@@ -180,7 +183,23 @@
       formContent.style.display = 'none';
       formSuccess.style.display = 'flex';
     });
-  </script>
 
+    (function () {
+    const toggle = document.getElementById('navToggle');
+    const links  = document.querySelector('.nav-links');
+    toggle.addEventListener('click', function () {
+      const open = links.classList.toggle('open');
+      toggle.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', open);
+    });
+    links.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        links.classList.remove('open');
+        toggle.classList.remove('open');
+        toggle.setAttribute('aria-expanded', false);
+      });
+    });
+  })();
+  </script>
 </body>
 </html>

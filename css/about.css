@@ -1,6 +1,6 @@
 /* ============================================================
-   blog.css — Styles for blog.html ONLY
-   Athiyah Zakir Portfolio · Projects Page
+   about.css — Styles for about.html ONLY
+   Athiyah Zakir Portfolio · About Page
    Imports Google Fonts: Cormorant Garamond + Jost
    ============================================================ */
 
@@ -15,14 +15,12 @@
   --lav-light:   #ede7f6;
   --mint:        #7bbfaa;
   --mint-light:  #daf1ec;
-  --amber:       #d4935a;
-  --amber-light: #fdebd8;
   --cream:       #fdf8f3;
   --ink:         #2c1f2e;
   --muted:       #7a6a7c;
   --border:      rgba(169, 130, 150, 0.18);
   --shadow-sm:   0 2px 12px rgba(100, 50, 70, 0.07);
-  --shadow-md:   0 8px 32px rgba(100, 50, 70, 0.12);
+  --shadow-md:   0 8px 32px rgba(100, 50, 70, 0.11);
   --r-md:        12px;
   --r-lg:        20px;
   --r-xl:        32px;
@@ -105,20 +103,17 @@ main {
 }
 
 /* ── PAGE HERO ─────────────────────────────────────────── */
-.projects-hero {
+.about-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
   margin-bottom: 5rem;
   padding-bottom: 4rem;
   border-bottom: 1px solid var(--border);
 }
 
-.projects-hero-inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
-}
-
-.projects-hero-text { max-width: 560px; }
+.about-hero-text {}
 
 .page-eyebrow {
   display: inline-flex;
@@ -143,102 +138,120 @@ main {
   background: var(--rose);
 }
 
-.projects-heading {
+.about-heading {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  font-size: clamp(2.4rem, 4vw, 3.6rem);
   font-weight: 500;
-  line-height: 1.08;
+  line-height: 1.1;
   letter-spacing: -0.02em;
   color: var(--ink);
   margin-bottom: 1.25rem;
 }
 
-.projects-heading em { font-style: italic; color: var(--rose); }
+.about-heading em { font-style: italic; color: var(--rose); }
 
-.projects-intro {
+.about-intro {
   font-size: 1.02rem;
   line-height: 1.8;
   color: var(--muted);
+  margin-bottom: 2rem;
 }
 
-/* Stats row */
-.stats-row {
+/* Strength pills */
+.strength-pills {
   display: flex;
-  gap: 2.5rem;
-  margin-top: 2.5rem;
   flex-wrap: wrap;
+  gap: 8px;
 }
 
-.stat {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-}
-
-.stat-num {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2rem;
+.pill {
+  font-size: 0.8rem;
   font-weight: 500;
-  color: var(--ink);
-  line-height: 1;
+  padding: 5px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
 }
 
-.stat-label {
-  font-size: 0.78rem;
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
+.pill-rose     { background: var(--rose-pale);  color: var(--rose); border-color: var(--rose-light); }
+.pill-lavender { background: var(--lav-light);  color: #6d5a9c;     border-color: #d4c9f0; }
+.pill-mint     { background: var(--mint-light); color: #3d8c78;     border-color: #aadfd1; }
 
-/* Hero photo */
-.projects-hero-img {
+/* Hero image */
+.about-image-wrap {
   position: relative;
 }
 
-.hero-img-frame {
+.about-image-frame {
   border-radius: var(--r-xl);
   overflow: hidden;
   aspect-ratio: 4/5;
-  background: linear-gradient(145deg, var(--rose-light), var(--lav-light));
+  background: linear-gradient(145deg, var(--lav-light), var(--rose-pale));
 }
 
-.hero-img-frame img {
+.about-image-frame img {
   width: 100%; height: 100%;
   object-fit: cover;
   display: block;
   transition: transform 0.5s ease;
 }
 
-.hero-img-frame:hover img { transform: scale(1.03); }
+.about-image-frame:hover img { transform: scale(1.03); }
 
-.hero-img-tag {
+.about-dots {
   position: absolute;
-  bottom: 20.5rem;
-  left: -1.5rem;
-  background: rgba(253, 248, 243, 0.92);
-  backdrop-filter: blur(8px);
+  bottom: -1rem; right: -1rem;
+  width: 80px; height: 80px;
+  background-image: radial-gradient(var(--lav-light) 1.5px, transparent 1.5px);
+  background-size: 12px 12px;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+/* ── TOC ───────────────────────────────────────────────── */
+.toc-section {
+  background: #fff;
   border: 1px solid var(--border);
-  border-radius: var(--r-md);
-  padding: 0.85rem 1.25rem;
-  box-shadow: var(--shadow-md);
+  border-radius: var(--r-lg);
+  padding: 1.75rem 2rem;
+  margin-bottom: 4rem;
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
-.hero-img-tag .tag-label {
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-  display: block;
-  margin-bottom: 3px;
-}
-
-.hero-img-tag .tag-value {
+.toc-label {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 500;
   color: var(--ink);
+  white-space: nowrap;
+  padding-top: 2px;
+  min-width: 110px;
+}
+
+.toc-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.toc-links a {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 5px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  transition: color 0.2s, background 0.2s, border-color 0.2s;
+}
+
+.toc-links a:hover {
+  color: var(--rose);
+  background: var(--rose-pale);
+  border-color: var(--rose-light);
 }
 
 /* ── SECTION HEADER ────────────────────────────────────── */
@@ -246,7 +259,16 @@ main {
   display: flex;
   align-items: baseline;
   gap: 1rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.section-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--rose);
+  opacity: 0.7;
+  min-width: 2rem;
 }
 
 .section-title {
@@ -262,190 +284,167 @@ main {
   background: var(--border);
 }
 
-.section-count {
-  font-size: 0.78rem;
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--muted);
+/* ── CONTENT SECTIONS ──────────────────────────────────── */
+.content-section {
+  margin-bottom: 5rem;
+  scroll-margin-top: 80px;
 }
 
-/* ── PROJECTS GRID ─────────────────────────────────────── */
-.projects-section { margin-bottom: 6rem; }
-
-.projects-grid {
+.content-body {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
 }
 
-/* ── PROJECT CARD ──────────────────────────────────────── */
-.project-card {
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: var(--r-lg);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
+.content-body.full { grid-template-columns: 1fr; }
 
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-md);
-}
-
-.project-card.featured {
-  grid-column: span 2;
-}
-
-/* Card image */
-.card-img {
-  aspect-ratio: 16/9;
-  overflow: hidden;
-  background: linear-gradient(145deg, var(--rose-pale), var(--lav-light));
-}
-
-.card-img img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.45s ease;
-}
-
-.project-card:hover .card-img img { transform: scale(1.05); }
-
-/* Card body */
-.card-body {
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.card-tag-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-bottom: 0.85rem;
-}
-
-.card-tag {
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 3px 10px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-}
-
-.tag-rose     { background: var(--rose-pale);   color: var(--rose);   border-color: var(--rose-light); }
-.tag-lavender { background: var(--lav-light);   color: #6d5a9c;       border-color: #d4c9f0; }
-.tag-mint     { background: var(--mint-light);  color: #3d8c78;       border-color: #aadfd1; }
-.tag-amber    { background: var(--amber-light); color: var(--amber);  border-color: #f4cca6; }
-
-.card-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.15rem;
-  font-weight: 500;
-  color: var(--ink);
-  margin-bottom: 0.65rem;
-  line-height: 1.3;
-}
-
-.card-desc {
-  font-size: 0.88rem;
-  line-height: 1.75;
+.content-prose p {
+  font-size: 0.97rem;
+  line-height: 1.85;
   color: var(--muted);
   margin-bottom: 1.1rem;
-  flex: 1;
 }
 
-/* Feature list inside card */
-.card-features {
+.content-prose p:last-child { margin-bottom: 0; }
+
+/* Strength list for soft skills */
+.strength-list {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  margin-bottom: 1.25rem;
+  gap: 12px;
 }
 
-.card-features li {
-  font-size: 0.83rem;
-  color: var(--muted);
+.strength-list li {
   display: flex;
   align-items: flex-start;
-  gap: 8px;
+  gap: 12px;
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: var(--muted);
 }
 
-.card-features li::before {
-  content: '—';
-  color: var(--rose);
+.strength-list li::before {
+  content: '';
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--rose);
   flex-shrink: 0;
+  margin-top: 0.5rem;
+}
+
+.strength-list strong { color: var(--ink); }
+
+/* Image card */
+.img-card {
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #fff;
+}
+
+.img-card img {
+  width: 100%; height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.img-card:hover img { transform: scale(1.04); }
+
+.img-caption {
   font-size: 0.8rem;
+  color: var(--muted);
+  font-style: italic;
+  padding: 0.75rem 1rem;
+  border-top: 1px solid var(--border);
 }
 
-/* Card CTA */
-.card-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  font-size: 0.84rem;
-  font-weight: 500;
-  color: var(--rose);
-  text-decoration: none;
-  letter-spacing: 0.02em;
-  margin-top: auto;
-  transition: gap 0.2s;
+/* Wellness case studies */
+.wellness-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
-.card-link:hover { gap: 11px; }
-
-/* ── CLOSING SECTION ───────────────────────────────────── */
-.closing-section {
+.wellness-card {
   background: #fff;
   border: 1px solid var(--border);
-  border-radius: var(--r-xl);
-  padding: 3rem 3.5rem;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 3rem;
-  align-items: center;
+  border-radius: var(--r-md);
+  padding: 1.25rem;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.closing-heading {
+.wellness-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-sm);
+}
+
+.wellness-card h3 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.6rem;
+  font-size: 1.05rem;
   font-weight: 500;
   color: var(--ink);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
-.closing-text {
-  font-size: 0.95rem;
-  line-height: 1.8;
+.wellness-card p {
+  font-size: 0.88rem;
+  line-height: 1.7;
   color: var(--muted);
-  max-width: 560px;
 }
 
-.closing-cta {
-  display: inline-flex;
+/* Resources */
+.resource-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.resource-list li {
+  display: flex;
   align-items: center;
   gap: 10px;
-  background: var(--rose);
-  color: #fff;
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 500;
-  padding: 0.85rem 2rem;
-  border-radius: 999px;
-  white-space: nowrap;
-  transition: background 0.2s, transform 0.2s;
-  box-shadow: 0 4px 20px rgba(201, 96, 122, 0.3);
 }
 
-.closing-cta:hover { background: #b5506a; transform: translateY(-2px); }
+.resource-list li::before {
+  content: '↗';
+  font-size: 0.8rem;
+  color: var(--rose);
+  flex-shrink: 0;
+}
+
+.resource-list a {
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+  border-bottom: 1px solid transparent;
+}
+
+.resource-list a:hover {
+  color: var(--rose);
+  border-bottom-color: var(--rose-light);
+}
+
+/* Back to top */
+.back-to-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  text-decoration: none;
+  margin-top: 1.5rem;
+  transition: color 0.2s;
+}
+
+.back-to-top:hover { color: var(--rose); }
 
 /* ── FOOTER ────────────────────────────────────────────── */
 .site-footer {
@@ -486,10 +485,11 @@ main {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-.page-eyebrow    { animation: fadeUp 0.55s ease both 0.1s; }
-.projects-heading { animation: fadeUp 0.55s ease both 0.2s; }
-.projects-intro  { animation: fadeUp 0.55s ease both 0.3s; }
-.stats-row       { animation: fadeUp 0.55s ease both 0.4s; }
+.page-eyebrow  { animation: fadeUp 0.55s ease both 0.1s; }
+.about-heading { animation: fadeUp 0.55s ease both 0.2s; }
+.about-intro   { animation: fadeUp 0.55s ease both 0.3s; }
+.strength-pills { animation: fadeUp 0.55s ease both 0.4s; }
+.about-image-wrap { animation: fadeUp 0.65s ease both 0.15s; }
 
 /* ── NAV MOBILE HAMBURGER ──────────────────────────────── */
 .nav-toggle {
@@ -552,34 +552,29 @@ main {
 }
 
   .site-nav { padding: 0 1.25rem; position: relative; }
-  .projects-hero-inner {
+
+  .about-hero {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
-  .projects-hero-img { order: -1; }
-  .hero-img-tag { left: 1rem; }
-  .projects-hero-text { max-width: 100%; }
 
-}
+  .about-image-wrap { order: -1; }
 
-
-
-@media (max-width: 900px) {
-  .projects-grid { grid-template-columns: 1fr 1fr; }
-  .project-card.featured { grid-column: span 2; }
-  .closing-section {
+  .content-body {
     grid-template-columns: 1fr;
     gap: 2rem;
-    padding: 2rem;
   }
+
+  .wellness-grid { grid-template-columns: 1fr 1fr; }
+
 }
 
 @media (max-width: 600px) {
   .site-nav { padding: 0 1.25rem; }
   main { padding: 2.5rem 1.25rem 4rem; }
-  .projects-grid { grid-template-columns: 1fr; }
-  .project-card.featured { grid-column: span 1; }
-  .stats-row { gap: 1.5rem; }
+  .about-hero { margin-bottom: 3.5rem; }
+  .toc-section { flex-direction: column; gap: 1rem; }
+  .wellness-grid { grid-template-columns: 1fr; }
   .footer-inner { flex-direction: column; text-align: center; }
   .nav-links a { padding: 0.4rem 0.7rem; font-size: 0.78rem; }
 
@@ -599,7 +594,7 @@ main {
   padding: 0.75rem 1.25rem 1rem;
   z-index: 99;
 }
-.projects-hero-img { display: none; }
+.about-image-wrap { display: none; }
 
 .nav-links.open { display: flex; }
 

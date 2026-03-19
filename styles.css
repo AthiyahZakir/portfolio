@@ -1,0 +1,890 @@
+* {
+    margin: 0; /* Remove default margins from all elements */
+    padding: 0; /* Remove default padding from all elements */
+    box-sizing: border-box; /* Include padding and border in element's total width/height */
+}
+
+/* ========== COLOR VARIABLES ========== */
+:root { /* CSS variables accessible globally throughout stylesheet */
+    --primary-color: #bf4080; /* Main brand color - pink for creativity */
+    --secondary-color: #EEBD89; /* Warm beige accent color */
+    --accent-color: #E09F3E; /* Golden highlights for important elements */
+    --text-dark: #1E1E1E; /* Primary text color - nearly black */
+    --text-light: #335C67; /* Secondary text color - teal for less emphasis */
+    --bg-light: #ffe6f7; /* Light pink background for body */
+    --bg-white: #FFFAE5; /* Cream background for cards and sections */
+    --card-shadow: rgba(51, 92, 103, 0.2); /* Semi-transparent shadow for depth */
+}
+
+/* ========== BODY & LAYOUT ========== */
+body {
+    font-family: Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content takes remaining space */
+main {
+    flex: 1;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+footer {
+    margin-top: auto;
+}
+
+/* ========== HEADER & NAVIGATION (All Pages) ========== */
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); /* REQUIREMENT 16: Linear gradient - diagonal from bottom-left to top-right */
+    box-shadow: 0 4px 6px var(--card-shadow); /* REQUIREMENT 3: Box shadow for depth */
+    position: sticky; /* Stays at top when scrolling */
+    top: 0; /* Stick to top of viewport */
+    z-index: 1000; /* Ensures header stays above other content */
+}
+
+header nav {
+    max-width: 1200px; /* Constrain navigation width */
+    margin: 0 auto; /* Center navigation horizontally */
+    padding: 1rem 2rem; /* Vertical and horizontal padding */
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: space-between; /* Space between logo and nav links */
+    align-items: center; /* Vertically center items */
+}
+
+header h1 {
+    color: var(--bg-white); /* Light text color for contrast */
+    font-size: 1.8rem; /* Large heading size */
+    font-weight: 700; /* REQUIREMENT 4: Bold text effect */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* REQUIREMENT 3 & 4: Text shadow - horizontal, vertical, blur, semi-transparent color */
+}
+
+header nav ul {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Flexbox for horizontal menu */
+    gap: 2rem; /* Space between navigation items */
+}
+
+header nav ul li a {
+    color: var(--bg-white); /* Light link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: 500; /* Medium font weight */
+    padding: 0.5rem 1rem; /* Vertical and horizontal padding */
+    border-radius: 60px; /* REQUIREMENT 15: Rounded corners - pill shape */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* REQUIREMENT 18: Smooth transitions on hover */
+}
+
+header nav ul li a:hover { /* REQUIREMENT 7: User action pseudo-class - hover state */
+    background-color: rgba(255, 255, 255, 0.2); /* REQUIREMENT 2: Semi-transparent white background */
+    transform: translateY(-2px); /* REQUIREMENT 17: Transform - lift link slightly */
+}
+
+header nav ul li a.active { /* Active page link styling */
+    background-color: var(--accent-color); /* Highlight active page */
+    border: 2px solid var(--bg-white); /* REQUIREMENT 14: Border around active link */
+}
+
+/* ========== INDEX PAGE STYLES ========== */
+
+/* Hero image section */
+.hero-image-section {
+    margin-bottom: 3rem; /* Space below section */
+    border-radius: 16px; /* REQUIREMENT 15: Rounded corners */
+    overflow: hidden; /* Hide overflow from rounded corners */
+    box-shadow: 0 8px 20px var(--card-shadow); /* REQUIREMENT 3: Box shadow for depth */
+    background-color: var(--bg-white); /* Background color */
+    padding: 1rem; /* Internal spacing */
+}
+
+.hero-image-section img {
+    width: 100%; /* Full width of container */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 500px; /* Limit height on large screens */
+    object-fit: cover; /* Cover container while maintaining aspect ratio */
+    border-radius: 12px; /* REQUIREMENT 15: Rounded corners */
+    border: 3px solid var(--accent-color); /* REQUIREMENT 14: Border around image */
+    display: block; /* Remove inline spacing */
+    transition: transform 0.3s ease; /* REQUIREMENT 18: Smooth transform transition */
+}
+
+.hero-image-section img:hover { /* REQUIREMENT 7: Hover pseudo-class */
+    transform: scale(1.02); /* REQUIREMENT 17: Transform - enlarge image slightly */
+}
+
+/* Hero section */
+.hero {
+    text-align: center; /* Center all text */
+    padding: 4rem 2rem; /* Large vertical padding */
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%); /* REQUIREMENT 16: Linear gradient with percentage stops */
+    color: var(--bg-white); /* Light text color */
+    border-radius: 30px; /* REQUIREMENT 15: Large rounded corners */
+    margin-bottom: 3rem; /* Space below hero */
+    box-shadow: 0 10px 25px var(--card-shadow); /* REQUIREMENT 3: Shadow for elevation */
+}
+
+.hero h2 {
+    font-size: 2.5rem; /* Large heading */
+    margin-bottom: 1rem; /* Space below heading */
+    animation: fadeInDown 1s ease-out; /* REQUIREMENT 19: Animation - fade in from top */
+}
+
+.hero p {
+    font-size: 1.2rem; /* Larger paragraph text */
+    margin-bottom: 2rem; /* Space below paragraph */
+    animation: fadeInUp 1s ease-out 0.3s backwards; /* REQUIREMENT 19: Animation with 0.3s delay */
+}
+
+/* CTA button */
+.cta-button {
+    display: inline-block; /* Inline but with block properties */
+    padding: 1rem 2rem; /* Button padding */
+    background-color: var(--accent-color); /* Golden background */
+    color: var(--text-dark); /* Dark text for contrast */
+    text-decoration: none; /* Remove underline */
+    border-radius: 30px; /* REQUIREMENT 15: Pill-shaped button */
+    font-weight: 600; /* Bold text */
+    transition: all 0.3s ease; /* REQUIREMENT 18: Transition all properties */
+    box-shadow: 0 4px 15px rgba(224, 159, 62, 0.4); /* REQUIREMENT 3: Shadow with semi-transparent color */
+}
+
+.cta-button:hover { /* REQUIREMENT 7: Hover pseudo-class */
+    background-color: var(--primary-color); /* Change to primary color */
+    color: var(--bg-white); /* Light text color */
+    box-shadow: 0 6px 20px rgba(158, 42, 43, 0.5); /* REQUIREMENT 2 & 3: Semi-transparent shadow */
+    animation: pulse 1s infinite; /* REQUIREMENT 19: Infinite pulse animation */
+}
+
+/* Featured section */
+.featured {
+    display: grid; /* CSS Grid for card layout */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive columns - minimum 280px */
+    gap: 2rem; /* Space between cards */
+    margin-bottom: 3rem; /* Space below section */
+}
+
+.featured h2 {
+    grid-column: 1 / -1; /* Span all columns */
+    font-size: 2rem; /* Large heading */
+    color: var(--secondary-color); /* Secondary brand color */
+    margin-bottom: 1rem; /* Space below heading */
+}
+
+.featured h2::before { content: "⭐ "; color: var(--accent-color); } /* REQUIREMENT 6: Pseudo-element with generated content - star before */
+.featured h2::after { content: " ⭐"; color: var(--accent-color); } /* REQUIREMENT 6: Pseudo-element with generated content - star after */
+
+.feature-card {
+    background-color: var(--bg-white); /* Card background */
+    padding: 2rem; /* Internal spacing */
+    border-radius: 12px; /* REQUIREMENT 15: Rounded corners */
+    box-shadow: 0 4px 12px var(--card-shadow); /* REQUIREMENT 3: Shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* REQUIREMENT 18: Smooth transitions */
+}
+
+.feature-card:hover { /* REQUIREMENT 7: Hover pseudo-class */
+    transform: translateY(-8px); /* REQUIREMENT 17: Transform - lift card */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); /* Larger shadow on hover */
+}
+
+.feature-card > h3 { /* REQUIREMENT 8: Child combinator - selects only direct h3 children */
+    color: var(--primary-color); /* Primary brand color */
+    margin-bottom: 1rem; /* Space below heading */
+    font-size: 1.3rem; /* Medium heading size */
+}
+
+/* ========== ABOUT & BLOG PAGE STYLES ========== */
+
+/* Page header */
+.page-header {
+    text-align: center; /* Center text */
+    padding: 3rem 2rem; /* Generous padding */
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%); /* REQUIREMENT 16: Linear gradient */
+    color: var(--bg-white); /* Light text */
+    border-radius: 12px; /* REQUIREMENT 15: Rounded corners */
+    margin-bottom: 2rem; /* Space below */
+    box-shadow: 0 10px 25px var(--card-shadow); /* REQUIREMENT 3: Shadow */
+}
+
+.page-header h1,
+.page-header h2 {
+    font-size: 2.5rem; /* Large heading */
+    margin-bottom: 0.5rem; /* Space below */
+    color: var(--bg-white); /* Light color */
+}
+
+.page-header p {
+    font-size: 1.1rem; /* Slightly larger text */
+    opacity: 0.9; /* REQUIREMENT 2: Semi-transparent effect */
+}
+
+/* Table of contents - About page */
+.toc-section {
+    background-color: var(--bg-white); /* Background color */
+    padding: 2rem; /* Internal spacing */
+    border-radius: 10px; /* REQUIREMENT 15: Rounded corners */
+    margin-bottom: 2rem; /* Space below */
+    border-left: 5px solid var(--accent-color); /* REQUIREMENT 14: Left border accent */
+    box-shadow: 0 4px 12px var(--card-shadow); /* REQUIREMENT 3: Shadow */
+}
+
+.toc-title {
+    color: var(--primary-color); /* Primary color */
+    font-weight: 600; /* Bold text */
+    margin-bottom: 1rem; /* Space below */
+    font-size: 1.3rem; /* Medium heading */
+}
+
+.toc-menu {
+    list-style: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+}
+
+.toc-menu li {
+    margin-bottom: 0.8rem; /* Space between items */
+}
+
+.toc-menu a {
+    color: var(--secondary-color); /* Secondary color */
+    text-decoration: none; /* Remove underline */
+    padding: 0.5rem 0; /* Vertical padding */
+    display: block; /* Full width clickable */
+    transition: color 0.3s ease, padding-left 0.3s ease; /* REQUIREMENT 18: Transitions */
+    font-weight: 500; /* Medium weight */
+}
+
+.toc-menu a:hover { /* REQUIREMENT 7: Hover pseudo-class */
+    color: var(--accent-color); /* Accent color on hover */
+    padding-left: 1rem; /* REQUIREMENT 17: Transform - indent on hover */
+}
+
+/* Content sections - About page */
+.content-section {
+    background-color: var(--bg-white); /* Background color */
+    padding: 2.5rem; /* Internal spacing */
+    margin-bottom: 2rem; /* Space below */
+    border-radius: 12px; /* REQUIREMENT 15: Rounded corners */
+    box-shadow: 0 4px 12px var(--card-shadow); /* REQUIREMENT 3: Shadow */
+    scroll-margin-top: 100px; /* Offset for sticky header when jumping to anchor */
+}
+
+.content-section h2 {
+    color: var(--secondary-color); /* Secondary color */
+    border-left: 4px solid var(--accent-color); /* REQUIREMENT 14: Left border */
+    padding-left: 1rem; /* Space from border */
+    margin-bottom: 1.5rem; /* Space below */
+    font-size: 1.8rem; /* Large heading */
+}
+
+.content-section h3 {
+    color: var(--primary-color); /* Primary color */
+    margin-top: 1.5rem; /* Space above */
+    margin-bottom: 1rem; /* Space below */
+    font-size: 1.3rem; /* Medium heading */
+}
+
+.content-section p {
+    margin-bottom: 1rem; /* Space below paragraphs */
+    line-height: 1.8; /* Line height for readability */
+    color: var(--text-dark); /* Dark text */
+}
+
+.content-section p strong {
+    color: var(--primary-color); /* Primary color for emphasis */
+    font-weight: 600; /* Bold text */
+}
+
+/* Section links */
+.section-link {
+    margin-top: 1.5rem; /* Space above */
+    padding-top: 1rem; /* Space above */
+    border-top: 1px solid var(--bg-light); /* REQUIREMENT 14: Top border separator */
+}
+
+.section-link a { /* REQUIREMENT 13: Relational/descendant selector */
+    color: var(--accent-color); /* Accent color */
+    text-decoration: none; /* Remove underline */
+    font-weight: 600; /* Bold text */
+    transition: color 0.3s ease; /* REQUIREMENT 18: Transition */
+}
+
+.section-link a:hover { /* REQUIREMENT 7: Hover pseudo-class */
+    color: var(--primary-color); /* Primary color on hover */
+}
+
+/* Image container */
+.img-container {
+    text-align: center; /* Center content */
+    margin: 2rem 0; /* Vertical margin */
+    padding: 1rem; /* Internal spacing */
+    background-color: var(--bg-light); /* Background color */
+    border-radius: 10px; /* REQUIREMENT 15: Rounded corners */
+}
+
+.img-container img {
+    max-width: 100%; /* Responsive - never exceed container */
+    height: auto; /* Maintain aspect ratio */
+    border: 3px solid var(--accent-color); /* REQUIREMENT 14: Border */
+    border-radius: 8px; /* REQUIREMENT 15: Rounded corners */
+    box-shadow: 0 6px 16px var(--card-shadow); /* REQUIREMENT 3: Shadow */
+    transition: transform 0.3s ease; /* REQUIREMENT 18: Transition */
+}
+
+.img-container img:hover { /* REQUIREMENT 7: Hover pseudo-class */
+    transform: scale(1.02); /* REQUIREMENT 17: Transform - enlarge */
+}
+
+.img-caption {
+    font-style: italic; /* Italic text */
+    color: var(--text-light); /* Light text color */
+    margin-top: 1rem; /* Space above */
+    font-size: 0.95rem; /* Slightly smaller text */
+    line-height: 1.6; /* Line height */
+}
+
+/* Case studies - About page */
+.case-study {
+    background-color: var(--bg-light); /* Light background */
+    padding: 1.5rem; /* Internal spacing */
+    margin-bottom: 1.5rem; /* Space below */
+    border-radius: 8px; /* REQUIREMENT 15: Rounded corners */
+    border-left: 4px solid var(--primary-color); /* REQUIREMENT 14: Left border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* REQUIREMENT 18: Transitions */
+}
+
+.case-study:hover { /* REQUIREMENT 7: Hover pseudo-class */
+    transform: translateX(5px); /* REQUIREMENT 17: Transform - shift right */
+    box-shadow: 0 4px 12px var(--card-shadow); /* REQUIREMENT 3: Shadow appears on hover */
+}
+
+.case-study h3 {
+    color: var(--primary-color); /* Primary color */
+    margin-top: 0; /* Remove top margin */
+    font-size: 1.2rem; /* Medium heading */
+}
+
+.case-study p {
+    margin-bottom: 0; /* Remove bottom margin */
+}
+
+/* Resource list - About page */
+.resource-list {
+    list-style: none; /* Remove default bullets */
+    padding: 0; /* Remove padding */
+}
+
+.resource-list li {
+    margin-bottom: 1rem; /* Space between items */
+    padding-left: 1.5rem; /* Space for custom bullet */
+    position: relative; /* For absolute positioning of pseudo-element */
+}
+
+.resource-list li::before { /* REQUIREMENT 6: Pseudo-element with generated content */
+    content: "→"; /* Arrow character */
+    position: absolute; /* Position relative to li */
+    left: 0; /* Align to left */
+    color: var(--accent-color); /* Accent color */
+    font-weight: bold; /* Bold arrow */
+}
+
+.resource-list a { /* REQUIREMENT 13: Relational selector */
+    color: var(--secondary-color); /* Secondary color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* REQUIREMENT 18: Transition */
+    font-weight: 500; /* Medium weight */
+}
+
+.resource-list a:hover { /* REQUIREMENT 7: Hover pseudo-class */
+    color: var(--accent-color); /* Accent color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+
+.resource-list a[target="_blank"]::after { /* REQUIREMENT 5 & 6: Attribute selector with pseudo-element */
+    content: " ↗"; /* External link icon */
+    font-size: 0.8em; /* Smaller size */
+    color: var(--accent-color); /* Accent color */
+}
+
+/* Blog intro text - Blog page */
+.blog-intro-text {
+    background-color: var(--bg-white); /* Background color */
+    padding: 2.5rem; /* Internal spacing */
+    margin-bottom: 2rem; /* Space below */
+    border-radius: 12px; /* REQUIREMENT 15: Rounded corners */
+    box-shadow: 0 4px 12px var(--card-shadow); /* REQUIREMENT 3: Shadow */
+}
+
+.blog-intro-text h2 {
+    color: var(--secondary-color); /* Secondary color */
+    font-size: 2rem; /* Large heading */
+    margin-bottom: 1.5rem; /* Space below */
+    text-align: center; /* Center text */
+}
+
+.blog-intro-text p {
+    font-size: 1.1rem; /* Slightly larger text */
+    line-height: 1.9; /* Generous line height */
+    color: var(--text-dark); /* Dark text */
+    margin-bottom: 1.2rem; /* Space below */
+}
+
+/* Blog cards section */
+.blog-cards-section {
+    margin-bottom: 3rem; /* Space below section */
+}
+
+.section-title {
+    font-size: 2rem; /* Large heading */
+    color: var(--secondary-color); /* Secondary color */
+    text-align: center; /* Center text */
+    margin-bottom: 2rem; /* Space below */
+    padding-bottom: 1rem; /* Space above border */
+    border-bottom: 3px solid var(--accent-color); /* REQUIREMENT 14: Bottom border */
+}
+
+.cards-container {
+    display: grid; /* CSS Grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive columns */
+    gap: 2rem; /* Space between cards */
+    padding: 1rem 0; /* Vertical padding */
+}
+
+.card {
+    background: var(--bg-white); /* Card background */
+    padding: 1.8rem; /* Internal spacing */
+    border-radius: 12px; /* REQUIREMENT 15: Rounded corners */
+    box-shadow: 0 4px 10px var(--card-shadow); /* REQUIREMENT 3: Shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* REQUIREMENT 18: Transitions */
+    text-align: left; /* Left-align text */
+    border-left: 4px solid var(--primary-color); /* REQUIREMENT 14: Left border accent */
+    display: flex; /* Flexbox for internal layout */
+    flex-direction: column; /* Stack children vertically */
+}
+
+.card img {
+    width: 100%; /* Full width */
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Cover area while maintaining aspect ratio */
+    border-radius: 8px; /* REQUIREMENT 15: Rounded corners */
+    margin-bottom: 1.2rem; /* Space below */
+    border: 2px solid var(--accent-color); /* REQUIREMENT 14: Border */
+}
+
+.card h3 {
+    font-size: 1.4rem; /* Medium-large heading */
+    margin: 0 0 1rem 0; /* Space below only */
+    color: var(--secondary-color); /* Secondary color */
+    font-weight: 600; /* Bold text */
+}
+
+.card p {
+    font-size: 1rem; /* Normal text size */
+    line-height: 1.7; /* Line height for readability */
+    color: var(--text-dark); /* Dark text */
+    margin-bottom: 1.5rem; /* Space below */
+    flex-grow: 1; /* Grow to fill available space - pushes button to bottom */
+}
+
+.card:hover { /* REQUIREMENT 7: Hover pseudo-class */
+    transform: translateY(-8px); /* REQUIREMENT 17: Transform - lift card */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Larger shadow */
+    border-left-color: var(--accent-color); /* Change border color */
+}
+
+.card a { /* REQUIREMENT 13: Relational selector */
+    display: inline-block; /* Inline with block properties */
+    padding: 0.8rem 1.5rem; /* Button padding */
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); /* REQUIREMENT 16: Linear gradient */
+    color: white; /* White text */
+    text-decoration: none; /* Remove underline */
+    border-radius: 8px; /* REQUIREMENT 15: Rounded corners */
+    transition: all 0.3s ease; /* REQUIREMENT 18: Transition all properties */
+    font-weight: 600; /* Bold text */
+    text-align: center; /* Center text */
+    align-self: flex-start; /* Align to start of flex container */
+}
+
+.card a:hover { /* REQUIREMENT 7: Hover pseudo-class */
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color)); /* REQUIREMENT 16: Reversed gradient */
+    transform: translateX(5px); /* REQUIREMENT 17: Transform - shift right */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* REQUIREMENT 3: Shadow */
+}
+
+/* Blog content section */
+.blog-content-section {
+    background-color: var(--bg-white); /* Background color */
+    padding: 2.5rem; /* Internal spacing */
+    margin-bottom: 2rem; /* Space below */
+    border-radius: 12px; /* REQUIREMENT 15: Rounded corners */
+    box-shadow: 0 4px 12px var(--card-shadow); /* REQUIREMENT 3: Shadow */
+    border-left: 5px solid var(--accent-color); /* REQUIREMENT 14: Left border */
+}
+
+.blog-content-section h2 {
+    color: var(--secondary-color); /* Secondary color */
+    font-size: 1.8rem; /* Large heading */
+    margin-bottom: 1.5rem; /* Space below */
+}
+
+.blog-content-section p {
+    font-size: 1.1rem; /* Slightly larger text */
+    line-height: 1.9; /* Generous line height */
+    color: var(--text-dark); /* Dark text */
+    margin-bottom: 1.2rem; /* Space below */
+}
+
+.blog-content-section p strong {
+    color: var(--primary-color); /* Primary color for emphasis */
+    font-size: 1.15rem; /* Slightly larger */
+}
+
+/* ========== CONTACT PAGE STYLES ========== */
+
+/* Contact header */
+.contact-header {
+    text-align: center; /* Center text */
+    padding: 3rem 2rem; /* Generous padding */
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color)); /* REQUIREMENT 16: Linear gradient */
+    color: var(--bg-white); /* Light text */
+    border-radius: 12px; /* REQUIREMENT 15: Rounded corners */
+    margin-bottom: 2rem; /* Space below */
+    box-shadow: 0 10px 25px var(--card-shadow); /* REQUIREMENT 3: Shadow */
+}
+
+.contact-header h2 {
+    font-size: 2.5rem; /* Large heading */
+    margin-bottom: 0.5rem; /* Space below */
+}
+
+.contact-header p {
+    font-size: 1.1rem; /* Slightly larger text */
+    opacity: 0.9; /* REQUIREMENT 2: Semi-transparent */
+}
+
+/* Form container */
+.form-container {
+    background-color: var(--bg-white); /* Background color */
+    padding: 2.5rem; /* Internal spacing */
+    border-radius: 12px; /* REQUIREMENT 15: Rounded corners */
+    box-shadow: 0 6px 16px var(--card-shadow); /* REQUIREMENT 3: Shadow */
+    margin-bottom: 2rem; /* Space below */
+}
+
+/* Fieldsets */
+fieldset {
+    border: 2px solid var(--bg-light); /* REQUIREMENT 14: Border */
+    border-radius: 10px; /* REQUIREMENT 15: Rounded corners */
+    padding: 2rem; /* Internal spacing */
+    margin-bottom: 2rem; /* Space below */
+}
+
+fieldset:nth-child(even) { /* REQUIREMENT 9 & 11: Structural/Nth pseudo-class - targets even fieldsets */
+    background-color: rgba(255, 243, 176, 0.3); /* REQUIREMENT 2: Semi-transparent background */
+}
+
+legend {
+    color: var(--primary-color); /* Primary color */
+    font-weight: 600; /* Bold text */
+    font-size: 1.2rem; /* Medium-large size */
+    padding: 0 1rem; /* Horizontal padding */
+}
+
+/* Form inputs */
+label {
+    display: block; /* Full width */
+    margin-bottom: 0.5rem; /* Space below */
+    color: var(--text-dark); /* Dark text */
+    font-weight: 500; /* Medium weight */
+}
+
+label span {
+    color: #ef4444; /* Red color for required indicator */
+    font-weight: bold; /* Bold asterisk */
+}
+
+input[type="text"], /* REQUIREMENT 5: Attribute selector - targets specific input types */
+input[type="email"], /* REQUIREMENT 5: Attribute selector */
+input[type="tel"], /* REQUIREMENT 5: Attribute selector */
+textarea {
+    width: 100%; /* Full width */
+    padding: 0.8rem; /* Internal spacing */
+    margin-bottom: 1.5rem; /* Space below */
+    border: 2px solid var(--bg-light); /* REQUIREMENT 14: Border */
+    border-radius: 8px; /* REQUIREMENT 15: Rounded corners */
+    font-family: Verdana, sans-serif; /* Match body font */
+    font-size: 1rem; /* Normal text size */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* REQUIREMENT 18: Transitions */
+}
+
+input:focus, /* REQUIREMENT 7: Focus pseudo-class - accessibility */
+textarea:focus { /* REQUIREMENT 7: Focus pseudo-class */
+    outline: none; /* Remove default outline */
+    border-color: var(--primary-color); /* Primary color border */
+    box-shadow: 0 0 0 3px rgba(158, 42, 43, 0.1); /* REQUIREMENT 2 & 3: Semi-transparent shadow */
+}
+
+input:valid { /* REQUIREMENT 12: Validity pseudo-class - green for valid input */
+    border-color: #4CAF50; /* Green border */
+}
+
+input:invalid { /* REQUIREMENT 12: Validity pseudo-class - red for invalid input */
+    border-color: #ef4444; /* Red border */
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing only, not horizontal */
+    min-height: 120px; /* Minimum height for textarea */
+}
+
+input[type="checkbox"] { /* REQUIREMENT 5: Attribute selector for checkboxes */
+    margin-right: 0.5rem; /* Space to the right */
+    margin-bottom: 1rem; /* Space below */
+    cursor: pointer; /* Show pointer cursor on hover */
+}
+
+/* Buttons */
+.button-group {
+    display: flex; /* Flexbox for button layout */
+    gap: 1rem; /* Space between buttons */
+    justify-content: center; /* Center buttons horizontally */
+    margin-top: 2rem; /* Space above */
+}
+
+button {
+    padding: 1rem 2.5rem; /* Button padding */
+    border: none; /* Remove default border */
+    border-radius: 8px; /* REQUIREMENT 15: Rounded corners */
+    font-family: Verdana, sans-serif; /* Match body font */
+    font-size: 1rem; /* Normal text size */
+    font-weight: 600; /* Bold text */
+    cursor: pointer; /* Show pointer cursor */
+    transition: all 0.3s ease; /* REQUIREMENT 18: Transition all properties */
+}
+
+button[type="submit"] { /* REQUIREMENT 5: Attribute selector for submit button */
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); /* REQUIREMENT 16: Linear gradient */
+    color: var(--bg-white); /* Light text color */
+    box-shadow: 0 4px 12px var(--card-shadow); /* REQUIREMENT 3: Shadow */
+}
+
+button[type="submit"]:hover { /* REQUIREMENT 7: Hover pseudo-class */
+    transform: translateY(-3px); /* REQUIREMENT 17: Transform - lift button */
+    box-shadow: 0 6px 20px rgba(158, 42, 43, 0.4); /* REQUIREMENT 2 & 3: Larger semi-transparent shadow */
+}
+
+button[type="reset"] { /* REQUIREMENT 5: Attribute selector for reset button */
+    background-color: var(--bg-light); /* Light background */
+    color: var(--text-dark); /* Dark text */
+}
+
+button[type="reset"]:hover { /* REQUIREMENT 7: Hover pseudo-class */
+    background-color: #e6d89c; /* Darker shade on hover */
+}
+
+/* Contact info boxes */
+.contact-info {
+    display: grid; /* CSS Grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 2rem; /* Space between boxes */
+    margin-top: 2rem; /* Space above */
+}
+
+.info-box {
+    background-color: var(--bg-white); /* Background color */
+    padding: 2rem; /* Internal spacing */
+    border-radius: 12px; /* REQUIREMENT 15: Rounded corners */
+    text-align: center; /* Center text */
+    box-shadow: 0 4px 12px var(--card-shadow); /* REQUIREMENT 3: Shadow */
+    border-top: 4px solid var(--accent-color); /* REQUIREMENT 14: Top border accent */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* REQUIREMENT 18: Transitions */
+}
+
+.info-box:hover { /* REQUIREMENT 7: Hover pseudo-class */
+    transform: translateY(-5px); /* REQUIREMENT 17: Transform - lift box */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Larger shadow on hover */
+}
+
+.info-box h3 {
+    color: var(--primary-color); /* Primary color */
+    margin-bottom: 1rem; /* Space below */
+    font-size: 1.4rem; /* Medium-large heading */
+}
+
+.info-box p {
+    color: var(--text-dark); /* Dark text */
+    font-weight: 500; /* Medium weight */
+}
+
+/* ========== FOOTER (All Pages) ========== */
+footer {
+    background-color: var(--secondary-color); /* Secondary color background */
+    color: var(--bg-light); /* Light text */
+    text-align: center; /* Center text */
+    padding: 2rem; /* Internal spacing */
+    margin-top: 4rem; /* Large space above */
+}
+
+footer p {
+    margin-bottom: 0.5rem; /* Space between paragraphs */
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeInDown { /* REQUIREMENT 19: Keyframe animation - fade in from top */
+    from { opacity: 0; transform: translateY(-30px); } /* Start invisible and above */
+    to { opacity: 1; transform: translateY(0); } /* End fully visible in place */
+}
+
+@keyframes fadeInUp { /* REQUIREMENT 19: Keyframe animation - fade in from bottom */
+    from { opacity: 0; transform: translateY(30px); } /* Start invisible and below */
+    to { opacity: 1; transform: translateY(0); } /* End fully visible in place */
+}
+
+@keyframes pulse { /* REQUIREMENT 19: Keyframe animation - pulsing effect */
+    0%, 100% { transform: scale(1); } /* Normal size at start and end */
+    50% { transform: scale(1.05); } /* 5% larger at midpoint */
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Tablet */
+@media (max-width: 768px) { /* Media query for tablet and smaller screens */
+    header nav {
+        flex-direction: column; /* Stack logo and nav vertically */
+        gap: 1rem; /* Space between elements */
+    }
+
+    header nav ul {
+        flex-direction: column; /* Stack nav links vertically */
+        gap: 0.5rem; /* Smaller gap between links */
+        width: 100%; /* Full width */
+    }
+
+    header nav ul li {
+        text-align: center; /* Center nav links */
+    }
+
+    main {
+        padding: 1rem; /* Reduced padding on smaller screens */
+    }
+
+    .hero h2,
+    .page-header h1,
+    .page-header h2,
+    .contact-header h2 {
+        font-size: 2rem; /* Smaller heading size */
+    }
+
+    .hero-image-section {
+        padding: 0.8rem; /* Reduced padding */
+    }
+
+    .hero-image-section img {
+        max-height: 350px; /* Smaller max height */
+    }
+
+    .content-section,
+    .form-container,
+    .blog-intro-text,
+    .blog-content-section {
+        padding: 1.5rem; /* Reduced padding */
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 1.5rem; /* Smaller gap */
+    }
+
+    .button-group {
+        flex-direction: column; /* Stack buttons vertically */
+    }
+
+    button {
+        width: 100%; /* Full width buttons */
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) { /* Media query for mobile screens */
+    header h1 {
+        font-size: 1.4rem; /* Smaller header text */
+    }
+
+    .hero,
+    .page-header,
+    .contact-header {
+        padding: 2rem 1rem; /* Reduced padding */
+    }
+
+    .hero h2,
+    .page-header h1,
+    .page-header h2,
+    .contact-header h2 {
+        font-size: 1.6rem; /* Even smaller heading */
+    }
+
+    .hero p,
+    .page-header p,
+    .contact-header p {
+        font-size: 1rem; /* Smaller paragraph text */
+    }
+
+    .hero-image-section {
+        padding: 0.5rem; /* Minimal padding */
+    }
+
+    .hero-image-section img {
+        max-height: 250px; /* Smaller max height */
+    }
+
+    .content-section,
+    .form-container,
+    .case-study,
+    .card {
+        padding: 1rem; /* Minimal padding */
+    }
+
+    .card img {
+        height: 180px; /* Smaller card image height */
+    }
+
+    .card a {
+        width: 100%; /* Full width button */
+        text-align: center; /* Center button text */
+    }
+
+    fieldset {
+        padding: 1rem; /* Reduced fieldset padding */
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+}
+
+/* ========== ACCESSIBILITY ========== */
+html {
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+a:focus, /* REQUIREMENT 7: Focus pseudo-class for keyboard navigation */
+button:focus, /* REQUIREMENT 7: Focus pseudo-class */
+input:focus, /* REQUIREMENT 7: Focus pseudo-class */
+textarea:focus { /* REQUIREMENT 7: Focus pseudo-class */
+    outline: 2px solid var(--accent-color); /* Visible focus outline for accessibility */
+    outline-offset: 2px; /* Space between element and outline */
+}
+
+/* ========== SPECIFICITY NOTES ========== */
+/* REQUIREMENT 20: Specificity consideration throughout stylesheet */
+/* Specificity calculation examples:
+   - body = 1 (element)
+   - .hero = 10 (class)
+   - .hero h2 = 11 (class + element)
+   - .featured h2::before = 21 (class + element + pseudo-element)
+   - input[type="text"] = 11 (element + attribute)
+   - #id = 100 (ID - not used in this project for flexibility)
+   Strategy: Used classes for reusability, avoided IDs, used variables for maintainability */
